@@ -1,4 +1,3 @@
-/* Reset and base */
 * {
     margin: 0;
     padding: 0;
@@ -13,15 +12,12 @@ html {
     background-color: #000;
 }
 
-/* Fixed background */
 .hero {
-    background: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1656532227950-0YLRXNHUGJVN1U47MZ6G/ALEX_NYE_220309_Harper_Lemoore_0380-A.jpg?format=2500w') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     position: relative;
 }
 
-/* Overlay with scrollable effect */
 .overlay {
     background-color: rgba(0, 0, 0, 0.1);
     height: 100%;
@@ -54,7 +50,6 @@ html {
     color: #ccc;
 }
 
-/* Navigation & Logo */
 header {
     position: fixed;
     width: 100%;
@@ -105,7 +100,6 @@ nav a:hover {
     color: lightgray;
 }
 
-/* Scrollable content below */
 .content {
     padding: 100px 50px;
     background-color: #111;
@@ -127,7 +121,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   padding: 40px 2   0px;
-  background: #f0eded; /* Light background or you can add an image */
+  background: #f0eded; 
 }
 
 .content-wrapper {
