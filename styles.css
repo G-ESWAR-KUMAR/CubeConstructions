@@ -30,7 +30,7 @@ html {
     padding: 2rem;
 }
 
-.overlay h1,p{
+.overlay h1,.overlay p{
     font-size: 3rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
@@ -100,10 +100,13 @@ nav a:hover {
     color: lightgray;
 }
 
-.content {
+.content1 {
     padding: 100px 50px;
-    background-color: #111;
+    background-color: #ffffff;
     min-height: 100vh;
+    color: black;
+    font-family:'Gill Sans', sans-serif;
+    justify-content: center;
 }
 
 .content h2 {
@@ -115,6 +118,7 @@ nav a:hover {
     max-width: 600px;
     line-height: 1.6;
 }
+
 .hero-section {
   min-height: 100vh;
   display: flex;
