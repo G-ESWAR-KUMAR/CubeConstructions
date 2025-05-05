@@ -50,55 +50,6 @@ html {
     color: #ccc;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 999;
-    background: transparent;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-}
-
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.2;
-}
-
-.logo-text span {
-    font-size: 0.8rem;
-    font-weight: normal;
-}
-
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a.active {
-    color: gray;
-}
-
-nav a:hover {
-    color: lightgray;
-}
 
   /* Make footer elements responsive */
   @media (max-width: 768px) {
