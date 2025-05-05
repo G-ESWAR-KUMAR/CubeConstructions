@@ -2,64 +2,111 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harper Construction</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harper Construction</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="https://cubeconstructions.in/wp-content/uploads/2024/11/Untitled.png" alt="Harper Logo">
-            <div class="logo-text">
-                &nbsp;&nbsp; CUBE<br><span>CONSTRUCTIONS</span>
+  <header>
+    <div class="logo">
+      <img src="https://cubeconstructions.in/wp-content/uploads/2024/11/Untitled.png" alt="Harper Logo">
+      <div class="logo-text">
+        &nbsp;&nbsp; CUBE<br><span>CONSTRUCTIONS</span>
+      </div>
+    </div>
+
+    <nav>
+      <a class="active" href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="news.html">NEWS</a>
+      <a href="careers.html">CAREERS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="hero"
+    style="background: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1502401761113-YQ93ANFTK3HJ0XNIAIKM/_MG_9693.jpg?format=2500w') no-repeat center center fixed;">
+    <div class="overlay">
+      <h1>HOW WE CAN HELP?</h1>
+    </div>
+  </section>
+
+
+  <section class="content1">
+    <div class="container-fluid" id="career" style="width: 100%;">
+      <div class="row justify-content-center">
+        <div class="col col-lg-6 col-md-12">
+          <h1>CONTACT US</h1>
+          <br />
+          <p>If you're ready to embark on the journey of building your dream home or investing in a residential property
+            that promises value and comfort, contact Cube Constructions today. Our team of experts is here to guide you
+            through every step of the construction process</p>
+          <br />
+          <hr />
+        </div>
+      </div>
+
+      <div class="row justify-content-bewteen mt-4 mx-none">
+        <div class="col-12 col-lg-6 col-md-12" id="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30605.1142637524!2d80.64183293796516!3d16.493792891909997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fb73aaaaaaab%3A0xe9c425737a0452ad!2sCapital%20Hospitals!5e0!3m2!1sen!2sin!4v1746288199739!5m2!1sen!2sin"
+            style="width: 100%; height: 100%;" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-12 d-block d-lg-none">
+          <h5 style="color: rgb(114, 111, 111); margin-top: 10px;">Cube Constructions, 201, MNR Complex, <br/> Capital Hospitals, Poranki, Vijayawada, Pin : 521137 </h5>
+          <h5 style="color: rgb(100, 96, 96);"><span><i class="bi bi-telephone-inbound"></i> &nbsp;9492250021 </span><br/> <span><i class="bi bi-envelope"></i> &nbsp;cubeconstructions@yahoo.com</span></h5>
+        </div>
+      <div class="card col-lg-6 col col-md-12 p-4">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="jhon" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" placeholder="alex" required>
+              </div>
             </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="jhon@gamil.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="Enter subject here" required>
+            </div>
+            <div class="form-row">
+              <label for="inputCity">Message</label>
+              <textarea class="form-control" id="inputCity" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+          </form>
         </div>
-
-      <nav>
-            <a class="active" href="index.html" >HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="services.html" >SERVICES</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="news.html">NEWS</a>
-            <a href="careers.html">CAREERS</a>
-            <a href="contact.html">CONTACT</a>
-        </nav>
-    </header>
-
-    <section class="hero" style="background: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1502401761113-YQ93ANFTK3HJ0XNIAIKM/_MG_9693.jpg?format=2500w') no-repeat center center fixed;">
-        <div class="overlay">
-            <h1>Welcome To<br> Cube
-                Constructions</h1>
-            <p class="scroll-indicator">Cube Constructions has been a name synonymous with quality, innovation, and integrity in the construction industry for the past 14 years.</p>
-        </div>
-    </section>
-
-    <div class="hero-section">
-        <div class="content-wrapper">
-          <h1>
-            CUBE CONSTRUCTIONS, HAS A PROUD TRADITION OF SERVICE AS A
-            CONSTRUCTION COMPANY SINCE 2010
-          </h1>
-          <p>
-            Cube Constructions, headquartered in Vijayawada, proudly stands as a symbol of quality, innovation, and integrity in the construction industry for over 14 years. With a solid foundation of regional expertise and a growing portfolio of residential and commercial projects, we have earned a reputation for delivering high-quality developments with precision and reliability. Our offerings—from premium 3 BHK residences to spacious 4 BHK duplex houses—reflect our unwavering commitment to excellence. Each project begins with a deep understanding of our clients’ needs and is executed with a focus on exceeding expectations. This customer-centric approach, rooted in trust and professionalism, continues to drive our success and growth across Andhra Pradesh.
-          </p>
-          <a href="#">Read our story.</a>
-        </div>
-        
       </div>
-      <div class="hero-section">
-        <div class="content-wrapper">
-          <h1>
-            We Offer a Wide Range of Services
-          </h1>
-          <p>
-            At Cube Constructions, we take pride in providing end-to-end construction solutions—from planning to project handover—through a dedicated team of architects, engineers, project managers, and skilled professionals who prioritize client satisfaction above all. Our portfolio includes a diverse array of residential and commercial projects, and we excel in various construction methodologies. By combining time-tested practices with modern techniques and technologies, we ensure that every project we undertake is delivered with the highest standards of quality, efficiency, and value. </p>
-          <a href="#">Read our story.</a>
-        </div>
-        
+      <div class="d-none d-lg-block">
+        <h5 style="color: rgb(114, 111, 111); margin-top: 10px;">Cube Constructions, 201, MNR Complex, <br/> Capital Hospitals, Poranki, Vijayawada, Pin : 521137 </h5>
+        <h5 style="color: rgb(110, 106, 106);"><span><i class="bi bi-telephone-inbound"></i> &nbsp;9492250021 </span><br/> <span><i class="bi bi-envelope"></i> &nbsp;cubeconstructions@yahoo.com</span></h5>
       </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
