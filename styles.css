@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Arial', sans-serif;
+    color: rgb(0, 0, 0);
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.hero {
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.overlay h1,.overlay p{
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.3); /* lighter transparency like the uploaded image */
+    backdrop-filter: blur(2px); /* optional subtle blur behind text */
+    letter-spacing: 2px;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+  
+
+.scroll-indicator {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+
+  /* Make footer elements responsive */
+  @media (max-width: 768px) {
+    .footer .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .footer .mb-4 a {
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+
+    .footer .mb-3 a {
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+
+    .footer .text-muted {
+      font-size: 0.875rem;
+    }
+
+    /* Stack social media icons vertically on mobile */
+    .footer .mb-4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Stack navigation links vertically on mobile */
+    .footer .mb-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  #mainNavbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  #mainNavbar .nav-link,
+  #mainNavbar .navbar-brand strong,
+  #mainNavbar .navbar-brand span {
+    color: black;
+    transition: color 0.3s ease;
+  }
+
+  /* On scroll: background black + text white */
+  #mainNavbar.scrolled {
+    background-color: black !important;
+  }
+
+  #mainNavbar.scrolled .nav-link,
+  #mainNavbar.scrolled .navbar-brand strong,
+  #mainNavbar.scrolled .navbar-brand span {
+    color: white;
+  }
+
+  /* Hover underline */
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .navbar-brand strong {
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand span {
+    font-size: 0.8rem;
+    display: block;
+    line-height: 1;
+  }
