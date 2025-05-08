@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cube Constructions</title>
+    <link rel="stylesheet" href="styles.css" /> <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="styles.css" />
+
+<!-- Google Fonts (optional enhancement) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap JS (for toggling, dropdowns, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .img-section {
+      height: 60vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay-text {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 2rem;
+      padding: 15px 30px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .img-section {
+        height: 50vh;
+      }
+
+      .overlay-text {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+      }
+    }
+
+    .section {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-full {
+      height: 80vh;
+    }
+
+    .overlay-text {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .section, .section-full {
+        height: 33vh;
+      }
+
+      .overlay-text {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+      }
+    }
+    </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top p-3" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-white" href="#">
+          <img src="https://cubeconstructions.in/wp-content/uploads/2024/11/Untitled.png" alt="Logo" height="50">
+          <div class="ms-2">
+            <strong>CUBE</strong><br><span style="font-size: 0.8rem;">CONSTRUCTIONS</span>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <div class="d-lg-none text-end w-100 mb-2">
+            <button type="button" class="btn btn-sm btn-danger me-3 mt-2" onclick="bootstrap.Collapse.getInstance(document.getElementById('navbarContent')).hide();">
+              &times; Close
+            </button>
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active text-white" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="services.html">SERVICES</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="projects.html">PROJECTS</a></li>
+            <!-- <li class="nav-item"><a class="nav-link text-white" href="news.html">NEWS</a></li> -->
+            <li class="nav-item"><a class="nav-link text-white" href="careers.html">CAREERS</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <section class="hero" style="background: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1656352692439-A6HLV2Z11Q4FTJPKHKM2/ALEX_NYE_LATTC_2.jpg?format=2500w') no-repeat center center fixed;">
+        <div class="overlay">
+            <h1><b>WE TAKE PRIDE IN OUR PROJECTS</b></h1>
+            </div>
+    </section>
+
+    <section class="container my-5" id="projects">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <h2 class="mb-4 font-weight-bold">Our Projects</h2>
+          <p class="mb-4">
+            Delivering projects that fulfill and exceed client expectations begins at the conceptual stage and thrives through collaboration.
+            At Cube Constructions, our integrated approach—uniting design, engineering, and construction teams—ensures a seamless transition
+            from vision to reality. We place your goals at the center of every decision, building not just structures but trust and long-term value.
+          </p>
+          <p class="mb-5 font-italic">
+            Explore our portfolio by selecting from the categories below and see how we turn blueprints into beautiful, lasting homes.
+          </p>
+    
+          
+    </section>
+
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Left Image: Delivery Methods -->
+        <div class="col-md-6">
+          <div class="img-section" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1522452310815-YV13RPR6YU4WT2PX97AO/A.NYE_San-Joaquin_036+%281%29.jpg?format=1000w');">
+            <div class="overlay-text">RESIDENTIAL</div>
+          </div>
+        </div>
+  
+        <!-- Right Image: Preconstruction -->
+        <div class="col-md-6">
+          <div class="img-section" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1522452718174-Q4X3NU5H9W5MYGVJ0LRS/Government.jpg?format=1000w');">
+            <div class="overlay-text">GOVERNMENT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Left Side -->
+        <div class="col-md-6">
+          <div class="section section-full" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1502139863140-HZHC0KGYGPVBSP059QXG/Higher+Education.jpg?format=1500w');">
+            <div class="overlay-text">HIGHER EDUCATION</div>
+          </div>
+        </div>
+    
+        <!-- Right Side -->
+        <div class="col-md-6">
+          <div class="section" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1502139908279-RNHUTX5HDHW31TNMHAQ7/Sustainable.jpg?format=750w');">
+            <div class="overlay-text">SUSTAINABLE</div>
+          </div>
+          <div class="section" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1502140324521-LT2RAZZ9PC6GCLD9AOUY/Healthcare.jpg?format=750w');">
+            <div class="overlay-text">HEALTHCARE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Left Image: Delivery Methods -->
+        <div class="col-md-6">
+          <div class="img-section" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1502140634801-8MA5EP0LVQUBBHSOOTTH/_MG_9735_HDR.jpg?format=1000w');">
+            <div class="overlay-text">EDUCATION K-12</div>
+          </div>
+        </div>
+  
+        <!-- Right Image: Preconstruction -->
+        <div class="col-md-6">
+          <div class="img-section" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1502140362205-69CU9XA4L4T58LCZYV8G/Education+K-12.jpg?format=1000w');">
+            <div class="overlay-text">AVIATION</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Left Image: Delivery Methods -->
+        <div class="col-md-6">
+          <div class="img-section" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1502142013171-NL53H6UKBLSAHDTXSD7Z/Commercial+Offices.jpg?format=1000w');">
+            <div class="overlay-text">COMMERCIAL OFFICES</div>
+          </div>
+        </div>
+  
+        <!-- Right Image: Preconstruction -->
+        <div class="col-md-6">
+          <div class="img-section" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1502142033378-3OX13QCC108P95PPAXI4/Parking.jpg?format=1000w');">
+            <div class="overlay-text">PARKING</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <script>
+        window.addEventListener('scroll', function () {
+          const navbar = document.getElementById('mainNavbar');
+          if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        });
+      </script>
+      <footer class="bg-light text-center text-dark py-5 mt-5">
+        <div class="container">
+      
+          <!-- Social Media Icons (Large + Spaced) -->
+          <div class="mb-4">
+            <a href="https://www.facebook.com/share/1GThsR6uwj/" class="text-dark mx-3 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/cubeconstructions_official?utm_source=qr&igsh=dWhoN2J5MGo0MDhu" class="text-dark mx-3 fs-4"><i class="bi bi-instagram"></i></a>
+            <!-- <a href="#" class="text-dark mx-3 fs-4"><i class="bi bi-twitter"></i></a> -->
+          </div>
+    
+      
+          <!-- Navigation Links -->
+          <div class="mb-3 d-flex flex-column flex-md-row justify-content-center align-items-center text-center">
+            <a href="contact.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Contact</a>
+            <a href="subcontractors.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Subcontractors</a>
+            <a href="terms.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Terms of Service</a>
+            <a href="privacy.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Privacy Policy</a>
+          </div>
+          
+      
+          <!-- Company Info -->
+          <div class="text-muted fs-6">
+            ©2010 Cube Construction | Since 2010. All Rights Reserved.
+          </div>
+      
+        </div>
+      </footer>
+</body>
+
+</html>
