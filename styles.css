@@ -79,7 +79,7 @@ html {
 
 
 /* Make footer elements responsive */
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
 
   .footer .container {
     padding-left: 15px;
@@ -180,7 +180,7 @@ html {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
 
   #mainNavbar {
     background-color: rgb(70,70,70);
@@ -200,6 +200,41 @@ html {
   .whatsapp-float{
     bottom: 30% !important;
     right: 10px !important;
+  }
+
+  /* Mobile/tablet hero overrides to fix blurry zoom fixed attachment issues and reduce subpage hero height */
+  .hero {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 50vh !important;
+  }
+  .home-hero {
+    height: 100vh !important;
+  }
+
+  /* Collapsed navbar drawer styling */
+  .navbar-collapse {
+    background: rgb(70, 70, 70);
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+  
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 0;
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+  
+  .overlay h1 {
+    font-size: 1.8rem !important;
+    padding: 15px 20px !important;
+    letter-spacing: 1px !important;
   }
 }
 
@@ -226,3 +261,237 @@ padding-top: 4px;
   color: white;
   text-decoration: none;
 }
+
+/* Projects Section Styling */
+.projects-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.projects-section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #1a1a1a, #504f4f);
+  border-radius: 2px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.project-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.project-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-card:hover .project-img-wrapper img {
+  transform: scale(1.08);
+}
+
+/* Glassmorphism Badges */
+.project-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #1a1a1a;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.project-status-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.status-ongoing {
+  background: linear-gradient(135deg, #ff7b00, #ffae00);
+}
+
+.status-completed {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.project-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.project-card:hover .project-title {
+  color: #ff7b00;
+}
+
+.project-location {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: #495057;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* Metadata Specs */
+.project-specs {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f1f3f5;
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.spec-item i {
+  font-size: 1.1rem;
+  color: #343a40;
+  margin-bottom: 3px;
+}
+
+.spec-val {
+  font-weight: 600;
+  color: #212529;
+}
+
+/* Progress Section for Ongoing Projects */
+.project-progress-container {
+  margin-bottom: 1.25rem;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 6px;
+}
+
+.project-progress-bar-bg {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff7b00, #ffae00);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+  position: relative;
+}
+
+.project-progress-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+  animation: progress-bar-stripes 1s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+  0% { background-position: 1rem 0; }
+  100% { background-position: 0 0; }
+}
+
+/* Extra Design Enhancements */
+.section-subtitle {
+  font-size: 1.05rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+}
+

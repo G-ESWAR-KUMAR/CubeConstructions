@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
   <!-- Custom CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome for WhatsApp icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -179,25 +180,25 @@
     /* Keyframes for changing background images */
     @keyframes slideBg {
       0% {
-        background-image: url('1.jpg');
+        background-image: url('Harivillu Icon City - Villas.png');
       }
 
       20% {
-        background-image: url('2.jpg');
+        background-image: url('Harivillu Signature City 1.png');
       }
 
       40% {
-        background-image: url('3.jpg');
+        background-image: url('Royal Residence.png');
       }
 
       60% {
-        background-image: url('4.jpg');
+        background-image: url('Harivillu Icon City - Villas 2.png');
       }
       80% {
-        background-image: url('https://cubeconstructions.in/wp-content/uploads/2024/11/d899ee9c-ebed-4f97-a547-e54e9124619f-768x1024.jpg');
+        background-image: url('Harivillu Signature City 2.png');
       }
       100% {
-        background-image: url('https://cubeconstructions.in/wp-content/uploads/2024/11/CUBE-CUNSTRUCTIONS-SRI-RESIDENCE-DAY-1-1.png');
+        background-image: url('Royal Residence 2.png');
       }
     }
 
@@ -238,7 +239,7 @@
 
 
     /* Make footer elements responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 991.98px) {
 
       .footer .container {
         padding-left: 15px;
@@ -339,7 +340,7 @@
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 991.98px) {
 
       #mainNavbar {
         background-color: rgb(70, 70, 70);
@@ -434,7 +435,7 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero home-hero">
     <div class="overlay">
       <h1><b>Welcome To Cube Constructions</b></h1>
     </div>
@@ -491,52 +492,456 @@
     </div>
   </section>
 
-  <div class="container grid-container">
-    <div class="img-grid">
-      <img src="1.jpg"
-        alt="Image 1">
-      <img
-        src="4.jpg"
-        alt="Image 2">
-      <img src="6.jpg"
-        alt="Image 3">
-      <img
-        src="https://plus.unsplash.com/premium_photo-1682377521753-58d1fd9fa5ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bHV4dXJ5JTIwdmlsbGF8ZW58MHx8MHx8fDA%3D"
-        alt="Image 4">
-      <img
-        src="https://www.hiranandaniparks.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbanner-appartment.dfdb5306.jpg&w=3840&q=75"
-        alt="Image 5">
-      <img
-        src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?cs=srgb&dl=pexels-fotoaibe-1571460.jpg&fm=jpg"
-        alt="Image 6">
+  <!-- Projects Showcase Section -->
+  <section class="py-5 bg-light" id="projects-showcase">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-9">
+          <span class="text-uppercase fw-bold text-warning letter-spacing-1" style="font-size: 0.85rem;">Our Portfolio</span>
+          <h2 class="projects-section-title d-block mt-2">PROJECT SHOWCASE</h2>
+          <p class="section-subtitle text-center">
+            At Cube Constructions, every project is more than just brick and mortar — it's a reflection of our client's aspirations, our craftsmanship, and our commitment to creating vibrant, sustainable living spaces.
+          </p>
+        </div>
+      </div>
 
+      <!-- Ongoing Projects Sub-section -->
+      <div class="row mb-5">
+        <div class="col-12 mb-4">
+          <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+            <h3 class="fw-bold m-0" style="font-size: 1.5rem; letter-spacing: 0.5px; color: #1a1a1a;">
+              <i class="bi bi-cone-striped text-warning me-2"></i> Ongoing Projects
+            </h3>
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold">Under Construction</span>
+          </div>
+        </div>
+        <!-- Card 1: Fortune Prime - Elevation -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Apartments</span>
+            <span class="project-status-badge status-ongoing">Ongoing</span>
+            <div class="project-img-wrapper">
+              <img src="Fortune Prime - Elevation.jpeg" alt="Fortune Prime - Elevation">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Fortune Prime - Elevation</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-warning"></i> Vijayawada, AP
+                </div>
+                <p class="project-desc">
+                  Premium luxury high-rise apartments offering 3BHK state-of-the-art residences with modern lifestyle clubhouses and facilities.
+                </p>
+              </div>
+              <div>
+                <div class="project-progress-container">
+                  <div class="progress-label">
+                    <span>Construction Progress</span>
+                    <span>75%</span>
+                  </div>
+                  <div class="project-progress-bar-bg">
+                    <div class="project-progress-bar-fill" style="width: 75%;"></div>
+                  </div>
+                </div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">1,850 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">3 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-event"></i>
+                    <span class="spec-val">Est: 2027</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    </div>
-  </div>
+        <!-- Card 2: Fortune Prime - Night View -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Apartments</span>
+            <span class="project-status-badge status-ongoing">Ongoing</span>
+            <div class="project-img-wrapper">
+              <img src="Fortune Prime - Elevation - Night View.jpeg" alt="Fortune Prime - Night View">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Fortune Prime - Night View</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-warning"></i> Vijayawada, AP
+                </div>
+                <p class="project-desc">
+                  A scenic night elevation of Fortune Prime showcasing state-of-the-art architectural facade lighting, modern entrance design, and luxury features.
+                </p>
+              </div>
+              <div>
+                <div class="project-progress-container">
+                  <div class="progress-label">
+                    <span>Construction Progress</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="project-progress-bar-bg">
+                    <div class="project-progress-bar-fill" style="width: 80%;"></div>
+                  </div>
+                </div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">2,200 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">3 & 4 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-event"></i>
+                    <span class="spec-val">Est: 2027</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <section class="container my-5" id="career">
-    <div class="row justify-content-center p-4">
-      <div class="col-lg-8 text-justify">
-        <h2 class="mb-4 font-weight-bold text-center">We Take Pride in the Projects We've Delivered</h2>
-        <p>
-          At Cube Constructions, every project is more than just brick and mortar — it's a reflection of our client's
-          aspirations, our craftsmanship, and our commitment to creating vibrant, sustainable living spaces.
-        </p>
-        <p>
-          OWhile customer satisfaction remains our most valued achievement, we’ve also been recognized across the
-          industry for our high standards in quality, safety, design, and sustainability. Our portfolio includes group
-          houses, apartments, villas, and custom-built individual homes, all crafted with an unwavering focus on
-          excellence and innovation.
-        </p>
-        <p class="justify-content-center">
-          We are especially proud to be pioneers in eco-conscious construction, with numerous LEED-certified
-          developments—including silver, gold, and platinum level certifications. These projects reflect our passion for
-          green building practices that not only enhance modern living but also safeguard the environment.
+        <!-- Card 3: TSR Prime -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Villas</span>
+            <span class="project-status-badge status-ongoing">Ongoing</span>
+            <div class="project-img-wrapper">
+              <img src="TSR Prime - Lay Out.jpeg" alt="TSR Prime - Layout">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">TSR Prime</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-warning"></i> Amaravati, AP
+                </div>
+                <p class="project-desc">
+                  Eco-friendly individual luxury villas built with sustainable green-building materials, customizable floor plans, and custom landscapes.
+                </p>
+              </div>
+              <div>
+                <div class="project-progress-container">
+                  <div class="progress-label">
+                    <span>Construction Progress</span>
+                    <span>50%</span>
+                  </div>
+                  <div class="project-progress-bar-bg">
+                    <div class="project-progress-bar-fill" style="width: 50%;"></div>
+                  </div>
+                </div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">3,100 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">4 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-event"></i>
+                    <span class="spec-val">Est: 2027</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          We understand that every structure we build is more than just a building—it represents our client’s vision for
-          the future, and we are honored to turn those dreams into lasting realities.
-        </p>
-        <a href="/about.html" class="btn btn-primary mt-3 bg-dark text-white">See Our Latest Projects</a>
+      </div>
+
+      <!-- Completed Projects Sub-section -->
+      <div class="row">
+        <div class="col-12 mb-4 mt-2">
+          <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+            <h3 class="fw-bold m-0" style="font-size: 1.5rem; letter-spacing: 0.5px; color: #1a1a1a;">
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Completed Projects
+            </h3>
+            <span class="badge bg-success text-white px-3 py-2 rounded-pill fw-semibold">Delivered</span>
+          </div>
+        </div>
+
+        <!-- Card 1: Royal Residence -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Apartments</span>
+            <span class="project-status-badge status-completed">Completed</span>
+            <div class="project-img-wrapper">
+              <img src="Royal Residence.png" alt="Royal Residence">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Royal Residence</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
+                </div>
+                <p class="project-desc">
+                  A premium residential apartment block designed with standard luxury, offering spaciously ventilated 3BHK flats within a secure gated community.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">1,950 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">3 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span class="spec-val">Delivered: 2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Royal Residence 2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Apartments</span>
+            <span class="project-status-badge status-completed">Completed</span>
+            <div class="project-img-wrapper">
+              <img src="Royal Residence 2.png" alt="Royal Residence 2">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Royal Residence 2</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
+                </div>
+                <p class="project-desc">
+                  Phase 2 of the prestigious Royal Residence project, adding ultra-modern exterior finishes, smart home integrations, and private parking slots.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">2,100 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">3 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span class="spec-val">Delivered: 2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Harivillu Signature City 1 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Residential</span>
+            <span class="project-status-badge status-completed">Completed</span>
+            <div class="project-img-wrapper">
+              <img src="Harivillu Signature City 1.png" alt="Harivillu Signature City 1">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Harivillu Signature City 1</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
+                </div>
+                <p class="project-desc">
+                  Modern premium multi-family gated community residences, featuring state-of-the-art concrete finishes and modern eco-friendly materials.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">1,800 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">3 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span class="spec-val">Delivered: 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Harivillu Signature City 2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Residential</span>
+            <span class="project-status-badge status-completed">Completed</span>
+            <div class="project-img-wrapper">
+              <img src="Harivillu Signature City 2.png" alt="Harivillu Signature City 2">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Harivillu Signature City 2</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
+                </div>
+                <p class="project-desc">
+                  The second phase of Signature City, expanding the residential area with green walkways, recreational parks, and community clubhouses.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">1,850 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">3 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span class="spec-val">Delivered: 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Harivillu Icon City - Villas -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Villas</span>
+            <span class="project-status-badge status-completed">Completed</span>
+            <div class="project-img-wrapper">
+              <img src="Harivillu Icon City - Villas.png" alt="Harivillu Icon City - Villas">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Harivillu Icon City - Villas</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
+                </div>
+                <p class="project-desc">
+                  Luxury individual double-storey villas built to premium design codes. Every villa includes private terrace space and landscaping.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">3,200 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">4 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span class="spec-val">Delivered: 2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Harivillu Icon City - Villas 2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Villas</span>
+            <span class="project-status-badge status-completed">Completed</span>
+            <div class="project-img-wrapper">
+              <img src="Harivillu Icon City - Villas 2.png" alt="Harivillu Icon City - Villas 2">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Harivillu Icon City - Villas 2</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
+                </div>
+                <p class="project-desc">
+                  Contemporary villa layouts optimized for maximum natural light, premium fittings, and architectural vastu compliance.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">3,400 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">4 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span class="spec-val">Delivered: 2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Harivillu Icon City - Individual House (Centered) -->
+        <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 mb-4">
+          <div class="project-card">
+            <span class="project-badge">Individual House</span>
+            <span class="project-status-badge status-completed">Completed</span>
+            <div class="project-img-wrapper">
+              <img src="Harivillu Icon City - Individual House.png" alt="Harivillu Icon City - Individual House">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Icon City - Individual House</h4>
+                <div class="project-location">
+                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
+                </div>
+                <p class="project-desc">
+                  An elegantly crafted independent home showcasing modern facade design, dedicated car parking, and high structural durability.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">2,200 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">3 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span class="spec-val">Delivered: 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4 text-center">
+        <div class="col-12">
+          <a href="projects.html" class="btn btn-dark btn-lg px-4 py-2 mt-3 shadow-sm fw-semibold" style="font-size: 0.95rem; border-radius: 30px;">
+            Explore All Projects <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
       </div>
     </div>
   </section>
