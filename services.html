@@ -27,28 +27,6 @@
       justify-content: center;
     }
 
-    .overlay-text {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      font-size: 2rem;
-      padding: 15px 30px;
-      text-align: center;
-      letter-spacing: 1px;
-    }
-
-    @media (max-width: 768px) {
-      .img-section {
-        height: 50vh;
-      }
-
-      .overlay-text {
-        font-size: 1.5rem;
-        padding: 10px 20px;
-      }
-    }
-    .text-justify {
-    text-align: justify;
-  }
     .section {
       position: relative;
       background-size: cover;
@@ -65,14 +43,18 @@
 
     .overlay-text {
       background-color: rgba(0, 0, 0, 0.5);
-      color: white;
+      color: #ffffff;
       padding: 15px 30px;
       font-size: 1.8rem;
       font-weight: 400;
       text-align: center;
+      letter-spacing: 1px;
     }
 
     @media (max-width: 768px) {
+      .img-section {
+        height: 50vh;
+      }
 
       .section,
       .section-full {
@@ -91,7 +73,7 @@
   <header>
     <nav class="navbar navbar-expand-lg fixed-top p-3" id="mainNavbar">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center text-white" href="#">
+        <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
           <img src="5.png" alt="Logo" height="50">
           <div class="ms-2">
             <strong>CUBE</strong><br><span style="font-size: 0.8rem;">CONSTRUCTIONS</span>
@@ -104,8 +86,8 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
           <div class="d-lg-none text-end w-100 mb-2">
-            <button type="button" class="btn btn-sm btn-danger me-3 mt-2" onclick="bootstrap.Collapse.getInstance(document.getElementById('navbarContent')).hide();">
-              &times; Close
+            <button type="button" class="mobile-close-btn" onclick="bootstrap.Collapse.getInstance(document.getElementById('navbarContent')).hide();">
+              <i class="bi bi-x-lg"></i>
             </button>
           </div>
           <ul class="navbar-nav">
@@ -120,130 +102,287 @@
     </nav>
   </header>
 
-  <section class="hero"
-    style="background: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1544550608205-7Z64Z4S5ZHUT1C54UUW7/ALEX_NYE_ELAC-G8_001-Stars.jpg?format=2500w') no-repeat center center fixed;">
+  <section class="hero subpage-hero hero-bg-rotate" id="services-hero">
     <div class="overlay">
-      <h1><b>SERVICES TO FIT YOUR NEEDS</b></h1>
+      <h1 class="hero-title" style="font-size: 3.2rem; font-weight: 700; background: none; backdrop-filter: none; border: none; padding: 0; letter-spacing: 4px;">
+        OUR <span class="text-gradient">SERVICES</span>
+      </h1>
     </div>
   </section>
 <a href="https://wa.me/919490562082" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
-  <section class="container my-5 p-4" id="services">
-    <div class="row justify-content-center text-justify">
-      <div class="col-lg-8 text-justify">
-        <h2 class="mb-4 font-weight-bold text-center">Our Services</h2>
+  <section class="container my-5" id="services">
+    <div class="text-center mb-5">
+      <h2 class="font-weight-bold">OUR SERVICES</h2>
+      <div class="section-divider" style="margin: 1.5rem auto;"></div>
+      <p class="text-muted col-lg-8 mx-auto">
+        At <strong>Cube Constructions</strong>, we offer a comprehensive suite of services that cater to diverse
+        residential construction needs. From concept to completion, our approach is personalized, collaborative, and
+        rooted in a deep understanding of what makes a house a home.
+      </p>
+    </div>
 
-        <p class="text-wrap">
-          At <strong>Cube Constructions</strong>, we offer a comprehensive suite of services that cater to diverse
-          residential construction needs. From concept to completion, our approach is personalized, collaborative, and
-          rooted in a deep understanding of what makes a house a home.
-          Every project is unique, and we tailor our delivery methods to align with your vision, budget, and timeline.
-        </p>
+    <!-- Specializations Card Grid -->
+    <h4 class="fw-bold text-center mb-4" style="color: #1a1a1a;">Our Specializations</h4>
+    <div class="row g-4 mb-5">
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i class="bi bi-people-fill"></i>
+          </div>
+          <h5>Group Houses</h5>
+          <p>Designed for modern community living, offering shared environments with personal space and complete privacy.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i class="bi bi-building-fill"></i>
+          </div>
+          <h5>Apartments</h5>
+          <p>Urban-focused complexes featuring stylish layouts, premium amenities, and convenience for contemporary lifestyles.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i class="bi bi-house-heart-fill"></i>
+          </div>
+          <h5>Villas</h5>
+          <p>Sophisticated, spacious, and elegant — our villas redefine luxurious living with bespoke designs and premium finishes.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i class="bi bi-house-fill"></i>
+          </div>
+          <h5>Individual Houses</h5>
+          <p>Fully customized solutions tailored to your personal taste, space requirements, and lifestyle goals.</p>
+        </div>
+      </div>
+    </div>
 
-        <h5 class="mt-4 font-weight-bold">Specializations</h5>
-        <ul>
-          <li class="text-wrap lh-base"><strong>Group Houses:</strong> Designed for modern community living, offering shared environments with
-            personal space and privacy.</li>
-          <li class="text-wrap mt-2 lh-base"><strong>Apartments:</strong> Urban-focused complexes featuring stylish layouts, premium amenities, and
-            convenience for contemporary lifestyles.</li>
-          <li class="text-wrap mt-2 lh-base"><strong>Villas:</strong> Sophisticated, spacious, and elegant — our villas redefine luxurious living with
-            bespoke designs.</li>
-          <li class="text-wrap mt-2 lh-base"><strong>Individual Houses:</strong> Fully customized solutions tailored to your personal taste, space
-            requirements, and lifestyle goals.</li>
-        </ul>
+    <!-- Construction Models Card Grid -->
+    <h4 class="fw-bold text-center mb-4" style="color: #1a1a1a;">Flexible Construction Models</h4>
+    <div class="row g-4 mb-5">
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i class="bi bi-key-fill"></i>
+          </div>
+          <h5>Turnkey Projects</h5>
+          <p>Complete responsibility from start to finish with ready-to-move-in delivery. A seamless, stress-free experience.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i class="bi bi-pencil-square"></i>
+          </div>
+          <h5>Design-Bid-Build</h5>
+          <p>Traditional, cost-effective construction model with phased project involvement and transparent budgeting.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i class="bi bi-diagram-3-fill"></i>
+          </div>
+          <h5>Construction Management</h5>
+          <p>Oversight and coordination with multiple stakeholders for complex builds, ensuring timely delivery.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <div class="service-card-icon">
+            <i class="bi bi-bricks"></i>
+          </div>
+          <h5>Build-to-Suit</h5>
+          <p>Tailored commercial or residential structures based on your specific use-case, preferences, and site conditions.</p>
+        </div>
+      </div>
+    </div>
 
-        <h5 class="mt-4 font-weight-bold">Flexible Construction Models</h5>
-        <p class="text-wrap">
-          While we specialize in <strong>Design-Build</strong> solutions for seamless execution, our team is also
-          proficient in:
-        </p>
-        <ul>
-          <li class="text-wrap lh-base"><strong>Turnkey Projects:</strong> Complete responsibility from start to finish with ready-to-move-in
-            delivery.</li>
-          <li class="text-wrap mt-2 lh-base"><strong>Design-Bid-Build:</strong> Traditional, cost-effective construction model with phased project
-            involvement.</li>
-          <li class="text-wrap mt-2 lh-base"><strong>Construction Management:</strong> Oversight and coordination with multiple stakeholders for
-            complex builds.</li>
-          <li class="text-wrap mt-2 lh-base"><strong>Build-to-Suit:</strong> Tailored commercial or residential structures based on your specific
-            use-case and preferences.</li>
-        </ul>
+    <div class="text-center">
+      <a href="contact.html" class="btn-premium">Start Your Project With Us <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+  </section>
 
-        <p class="mt-4 text-wrap">
-          With a strong focus on quality, innovation, and customer satisfaction, Cube Constructions is your trusted
-          partner for any residential project — no matter the size or scope.
-        </p>
-
-        <div class="text-center mt-4 text-justify">
-          <a href="contact.html" class="btn btn-outline-primary">Start Your Project with Us</a>
+  <!-- Our Expertise Process - Visual Section Using Real Projects -->
+  <section class="container-fluid p-0 my-5">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <div class="img-section gallery-overlay-section"
+          style="background-image: url('Royal Residence.png');">
+          <div class="overlay-text">TURNKEY PROJECTS</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="img-section gallery-overlay-section"
+          style="background-image: url('Harivillu Signature City 1.png');">
+          <div class="overlay-text">DESIGN & BUILD</div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="container-fluid p-0">
+  <section class="container-fluid p-0">
     <div class="row g-0">
-      <!-- Left Image: Delivery Methods -->
       <div class="col-md-6">
-        <div class="img-section"
-          style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1493944478462-USA36MDK0SUV863VHGF4/_MG_2848_HDR.jpg?format=1000w');">
-          <div class="overlay-text">DELIVERY METHODS</div>
+        <div class="section section-full gallery-overlay-section"
+          style="background-image: url('Sri Residence.png');">
+          <div class="overlay-text">ARCHITECTURAL PLANNING</div>
         </div>
       </div>
-
-      <!-- Right Image: Preconstruction -->
       <div class="col-md-6">
-        <div class="img-section"
-          style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1494019101575-XA18OLNB1Y6XZ84AJDLL/c_2334_0001.png?format=1000w');">
-          <div class="overlay-text">PRECONSTRUCTION</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid p-0">
-    <div class="row g-0">
-      <!-- Left Side -->
-      <div class="col-md-6">
-        <div class="section section-full"
-          style="background-image: url('6.jpg');">
-          <div class="overlay-text">DESIGN PLAN</div>
-        </div>
-      </div>
-
-      <!-- Right Side -->
-      <div class="col-md-6">
-        <div class="section"
-          style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1494019099271-ENXZ1WSE9QTUBQB5REIB/_MG_1474_HDR.jpg?format=750w');">
+        <div class="section gallery-overlay-section"
+          style="background-image: url('Harivillu Icon City - Villas.png');">
           <div class="overlay-text">CONSTRUCTION</div>
         </div>
-        <div class="section"
-          style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1494019130757-4I8EV4SQBP58Q0QVWZN0/027+-+6.2.15+GWT+South+Mat+Slab+1st+Half+Pour.jpg?format=750w');">
-          <div class="overlay-text">SAFETY</div>
+        <div class="section gallery-overlay-section"
+          style="background-image: url('Harivillu Icon City - Individual House.png');">
+          <div class="overlay-text">PROJECT MANAGEMENT</div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container-fluid p-0">
+  <section class="container-fluid p-0">
     <div class="row g-0">
-      <!-- Left Image: Delivery Methods -->
       <div class="col-md-6">
-        <div class="img-section"
-          style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1493944529667-K0EPAHO5HDTA3JUC49RH/_MG_0972.jpg?format=1000w');">
-          <div class="overlay-text">SUSTAINABILITY</div>
+        <div class="img-section gallery-overlay-section"
+          style="background-image: url('Fortune Prime - Elevation.jpeg');">
+          <div class="overlay-text">QUALITY ASSURANCE</div>
         </div>
       </div>
-
-      <!-- Right Image: Preconstruction -->
       <div class="col-md-6">
-        <div class="img-section"
-          style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1494018918896-2W1VFHWECQXVI7FGG2SU/_MG_2637_HDR.jpg?format=1000w');">
-          <div class="overlay-text">DESIGN MANAGEMENT</div>
+        <div class="img-section gallery-overlay-section"
+          style="background-image: url('TSR Prime - Lay Out.jpeg');">
+          <div class="overlay-text">SUSTAINABLE BUILDING</div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <div class="section-divider" style="margin: 3rem auto;"></div>
+
+  <section class="container my-5 text-center">
+    <h2 class="font-weight-bold">Why Choose Cube Constructions?</h2>
+    <div class="section-divider" style="margin: 1.5rem auto;"></div>
+    <div class="row g-4 mt-3">
+      <div class="col-md-4">
+        <div class="premium-card text-start">
+          <div class="premium-card-icon-wrapper">
+            <i class="bi bi-award-fill"></i>
+          </div>
+          <h5 class="premium-card-title">10+ Years Experience</h5>
+          <p class="premium-card-text">Over a decade of delivering premium residential projects across India with unwavering quality standards.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="premium-card text-start">
+          <div class="premium-card-icon-wrapper">
+            <i class="bi bi-people-fill"></i>
+          </div>
+          <h5 class="premium-card-title">Expert Team</h5>
+          <p class="premium-card-text">A dedicated team of architects, engineers, and project managers committed to excellence.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="premium-card text-start">
+          <div class="premium-card-icon-wrapper">
+            <i class="bi bi-hand-thumbs-up-fill"></i>
+          </div>
+          <h5 class="premium-card-title">100% Client Satisfaction</h5>
+          <p class="premium-card-text">Our client-first approach ensures your vision is realized with precision, transparency, and care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Project Portfolio - Creative Grid -->
+  <section class="container my-5 py-4">
+    <div class="text-center mb-5 reveal">
+      <span class="text-uppercase fw-bold text-gradient" style="font-size: 0.8rem; letter-spacing: 2px;">Our Work</span>
+      <h2 class="fw-bold mt-2 mb-3" style="font-size: 2rem; color: #1a1a1a;">Explore Our Project Portfolio</h2>
+      <p class="text-muted col-lg-8 mx-auto" style="line-height: 1.8;">
+        Every project we undertake reflects our commitment to quality, innovation, and client satisfaction. Browse through our diverse portfolio of completed and ongoing residential developments.
+      </p>
+    </div>
+
+    <div class="services-portfolio-grid reveal">
+      <!-- Royal Residence - Wide Card -->
+      <div class="portfolio-card-wide" style="background-image: url('Royal Residence.png');">
+        <div class="portfolio-card-overlay">
+          <div class="p-type">Completed · Apartments</div>
+          <h5>Royal Residence</h5>
+          <div class="p-specs"><span>1,950 sqft</span><span>3 BHK</span><span>2025</span></div>
+        </div>
+      </div>
+
+      <!-- Harivillu Signature City - Tall -->
+      <div class="portfolio-card-tall" style="background-image: url('Harivillu Signature City 1.png');">
+        <div class="portfolio-card-overlay">
+          <div class="p-type">Completed · Residential</div>
+          <h5>Signature City</h5>
+          <div class="p-specs"><span>1,800 sqft</span><span>3 BHK</span></div>
+        </div>
+      </div>
+
+      <!-- Sri Residence - Small -->
+      <div class="portfolio-card-small" style="background-image: url('Sri Residence.png');">
+        <div class="portfolio-card-overlay">
+          <div class="p-type">Completed · Premium</div>
+          <h5>Sri Residence</h5>
+          <div class="p-specs"><span>3 BHK</span><span>New Launch</span></div>
+        </div>
+      </div>
+
+      <!-- Icon City Villas - Small -->
+      <div class="portfolio-card-small" style="background-image: url('Harivillu Icon City - Villas.png');">
+        <div class="portfolio-card-overlay">
+          <div class="p-type">Completed · Villas</div>
+          <h5>Icon City Villas</h5>
+          <div class="p-specs"><span>4 BHK</span><span>3,200 sqft</span></div>
+        </div>
+      </div>
+
+      <!-- Individual House - Tall -->
+      <div class="portfolio-card-tall" style="background-image: url('Harivillu Icon City - Individual House.png');">
+        <div class="portfolio-card-overlay">
+          <div class="p-type">Completed · Individual House</div>
+          <h5>Icon City House</h5>
+          <div class="p-specs"><span>2,200 sqft</span><span>3 BHK</span></div>
+        </div>
+      </div>
+
+      <!-- TSR Prime - Small -->
+      <div class="portfolio-card-small" style="background-image: url('TSR Prime - Lay Out.jpeg');">
+        <div class="portfolio-card-overlay">
+          <div class="p-type">Ongoing · Villas</div>
+          <h5>TSR Prime</h5>
+          <div class="p-specs"><span>4 BHK</span><span>3,100 sqft</span></div>
+        </div>
+      </div>
+
+      <!-- Fortune Prime - Wide -->
+      <div class="portfolio-card-wide" style="background-image: url('Fortune Prime - Elevation.jpeg');">
+        <div class="portfolio-card-overlay">
+          <div class="p-type">Ongoing · Apartments</div>
+          <h5>Fortune Prime</h5>
+          <div class="p-specs"><span>1,850 sqft</span><span>3 BHK</span><span>Est: 2027</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5 reveal">
+      <a href="projects.html" class="btn-premium btn-glow px-5 py-3" style="font-size: 0.9rem;">
+        View All Projects <i class="bi bi-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </section>
 
   <script>
     const navbar = document.getElementById('mainNavbar');
@@ -262,17 +401,31 @@
 
     // Collapse show/hide background toggle
     collapse.addEventListener('show.bs.collapse', function () {
-      navbar.classList.add('scrolled'); // make background white
+      navbar.classList.add('scrolled');
     });
 
     collapse.addEventListener('hide.bs.collapse', function () {
       if (window.scrollY < 50) {
-        navbar.classList.remove('scrolled'); // revert to transparent if at top
+        navbar.classList.remove('scrolled');
       }
+    });
+
+    // Scroll Reveal
+    document.addEventListener('DOMContentLoaded', function () {
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => observer.observe(el));
     });
   </script>
 
-  <footer class="bg-light text-center text-dark py-5 mt-5">
+  <footer class="bg-light text-center text-dark py-5">
     <div class="container">
 
       <!-- Social Media Icons (Large + Spaced) -->
@@ -300,6 +453,7 @@
 
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cube Constructions</title>
+  <title>Cube Constructions - Projects</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
@@ -12,82 +12,273 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts (Poppins) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-      .img-section {
-      height: 60vh;
-      background-size: cover;
-      background-position: center;
+  <style>
+    /* Projects-specific styles */
+    .projects-stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .projects-stat-item {
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      background: #ffffff;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .projects-stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 25%;
+      height: 50%;
+      width: 1px;
+      background: rgba(0,0,0,0.06);
+    }
+    .projects-stat-item:hover {
+      background: linear-gradient(135deg, rgba(255,123,0,0.03), rgba(255,174,0,0.03));
+    }
+    .projects-stat-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ff7b00, #ffae00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .projects-stat-label {
+      font-size: 0.85rem;
+      color: #6c757d;
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
 
-    .overlay-text {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      font-size: 2rem;
-      padding: 15px 30px;
-      text-align: center;
+    /* Immersive Mega Cards */
+    .mega-card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 520px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      cursor: pointer;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .mega-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.85) 100%);
+      z-index: 1;
+      transition: all 0.6s ease;
+    }
+    .mega-card:hover::before {
+      background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%);
+    }
+    .mega-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    }
+
+    .mega-card-content {
+      position: relative;
+      z-index: 2;
+      padding: 2.5rem;
+      width: 100%;
+      color: #ffffff;
+    }
+    .mega-card-tags {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .mega-card-tag {
+      padding: 5px 14px;
+      border-radius: 30px;
+      font-size: 0.65rem;
+      font-weight: 600;
       letter-spacing: 1px;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+    .mega-card-tag.type {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+    }
+    .mega-card-tag.status {
+      background: rgba(255,255,255,0.9);
+      color: #1a1a1a;
+    }
+    .mega-card-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+    .mega-card-desc {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin-bottom: 0;
+      max-width: 90%;
+    }
+    .mega-card-specs {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .mega-card-spec {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .mega-card-spec i {
+      color: #ffae00;
+    }
+    .mega-card-number {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 5rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+      z-index: 2;
+      letter-spacing: -4px;
+      pointer-events: none;
+    }
+    .mega-card-hover-info {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, margin 0.5s ease;
+      margin-top: 0;
+    }
+    .mega-card:hover .mega-card-hover-info {
+      max-height: 80px;
+      margin-top: 1rem;
+    }
+    .mega-card-hover-info p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      margin-bottom: 0;
     }
 
-    @media (max-width: 768px) {
-      .img-section {
-        height: 50vh;
-      }
-
-      .overlay-text {
-        font-size: 1.5rem;
-        padding: 10px 20px;
-      }
+    /* Section headers */
+    .projects-section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
-
-    .section {
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      height: 40vh;
+    .projects-section-header .icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .projects-section-header .icon-circle.completed {
+      background: linear-gradient(135deg, #11998e, #38ef7d);
+      color: #fff;
+    }
+    .projects-section-header .icon-circle.ongoing {
+      background: linear-gradient(135deg, #ff7b00, #ffae00);
+      color: #fff;
+    }
+    .projects-section-header h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    .projects-section-header .header-line {
+      flex-grow: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(0,0,0,0.08), transparent);
     }
 
-    .section-full {
-      height: 80vh;
-    }
-
-    .overlay-text {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 15px 30px;
-      font-size: 1.8rem;
-      font-weight: 400;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .section, .section-full {
-        height: 33vh;
+    @media (max-width: 991.98px) {
+      .projects-stats-row {
+        grid-template-columns: repeat(2, 1fr);
       }
-
-      .overlay-text {
+      .projects-stat-item:nth-child(2)::after {
+        display: none;
+      }
+      .projects-stat-number {
+        font-size: 2rem;
+      }
+      .mega-card {
+        min-height: 400px;
+      }
+      .mega-card-title {
+        font-size: 1.4rem;
+      }
+      .mega-card-desc {
+        max-width: 100%;
+      }
+      .mega-card-number {
+        font-size: 3.5rem;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .projects-stats-row {
+        grid-template-columns: 1fr 1fr;
+      }
+      .projects-stat-item {
+        padding: 1.5rem 1rem;
+      }
+      .projects-stat-item:nth-child(2)::after {
+        display: none;
+      }
+      .projects-stat-item:nth-child(1)::after,
+      .projects-stat-item:nth-child(3)::after {
+        display: none;
+      }
+      .mega-card {
+        min-height: 350px;
+        border-radius: 16px;
+      }
+      .mega-card-content {
+        padding: 1.5rem;
+      }
+      .mega-card-title {
         font-size: 1.2rem;
-        padding: 10px 20px;
+      }
+      .mega-card-specs {
+        flex-wrap: wrap;
+        gap: 0.75rem;
       }
     }
-    </style>
+  </style>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg fixed-top p-3" id="mainNavbar">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center text-white" href="#">
+        <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
           <img src="5.png" alt="Logo" height="50">
           <div class="ms-2">
             <strong>CUBE</strong><br><span style="font-size: 0.8rem;">CONSTRUCTIONS</span>
@@ -100,8 +291,8 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
           <div class="d-lg-none text-end w-100 mb-2">
-            <button type="button" class="btn btn-sm btn-danger me-3 mt-2" onclick="bootstrap.Collapse.getInstance(document.getElementById('navbarContent')).hide();">
-              &times; Close
+            <button type="button" class="mobile-close-btn" onclick="bootstrap.Collapse.getInstance(document.getElementById('navbarContent')).hide();">
+              <i class="bi bi-x-lg"></i>
             </button>
           </div>
           <ul class="navbar-nav">
@@ -116,158 +307,299 @@
     </nav>
   </header>
 
-    <section class="hero" style="background: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1656352692439-A6HLV2Z11Q4FTJPKHKM2/ALEX_NYE_LATTC_2.jpg?format=2500w') no-repeat center center fixed;">
-        <div class="overlay">
-            <h1><b>WE TAKE PRIDE IN OUR PROJECTS</b></h1>
-            </div>
-    </section>
-<a href="https://wa.me/919490562082" target="_blank" class="whatsapp-float">
+  <!-- Hero -->
+  <section class="hero subpage-hero hero-bg-rotate" id="projects-hero">
+    <div class="overlay">
+      <h1 class="hero-title" style="font-size: 3.2rem; font-weight: 700; background: none; backdrop-filter: none; border: none; padding: 0; letter-spacing: 4px;">
+        OUR <span class="text-gradient">PROJECTS</span>
+      </h1>
+    </div>
+  </section>
+
+  <a href="https://wa.me/919490562082" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
-    <section class="container my-5" id="projects">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 text-center">
-          <h2 class="mb-4 font-weight-bold">Our Projects</h2>
-          <p class="mb-4">
-            Delivering projects that fulfill and exceed client expectations begins at the conceptual stage and thrives through collaboration.
-            At Cube Constructions, our integrated approach—uniting design, engineering, and construction teams—ensures a seamless transition
-            from vision to reality. We place your goals at the center of every decision, building not just structures but trust and long-term value.
-          </p>
-          <p class="mb-5 font-italic">
-            Explore our portfolio by selecting from the categories below and see how we turn blueprints into beautiful, lasting homes.
-          </p>
-    
-          
-    </section>
 
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <!-- Left Image: Delivery Methods -->
-        <div class="col-md-6">
-          <div class="img-section" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59011f5d5016e1a53768b5dc/1522452310815-YV13RPR6YU4WT2PX97AO/A.NYE_San-Joaquin_036+%281%29.jpg?format=1000w');">
-            <div class="overlay-text">RESIDENTIAL</div>
-          </div>
-        </div>
-  
-        <!-- Right Image: Preconstruction -->
-        <div class="col-md-6">
-          <div class="img-section" style="background-image: url('https://plus.unsplash.com/premium_photo-1682377521753-58d1fd9fa5ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bHV4dXJ5JTIwdmlsbGF8ZW58MHx8MHx8fDA%3D');">
-            <div class="overlay-text">VILLAS</div>
-          </div>
-        </div>
+  <!-- Stats Bar -->
+  <section class="container my-5 py-3">
+    <div class="row justify-content-center text-center mb-4 reveal">
+      <div class="col-lg-8">
+        <span class="text-uppercase fw-bold text-gradient" style="font-size: 0.8rem; letter-spacing: 2px;">Our Portfolio</span>
+        <h2 class="fw-bold mt-2 mb-3" style="font-size: 2rem; color: #1a1a1a;">Building Dreams Into Reality</h2>
+        <p class="text-muted" style="line-height: 1.8;">
+          At Cube Constructions, every project is more than just brick and mortar — it's a reflection of our client's aspirations, our craftsmanship, and our commitment to creating vibrant, sustainable living spaces.
+        </p>
       </div>
+    </div>
+    <div class="projects-stats-row reveal">
+      <div class="projects-stat-item">
+        <div class="projects-stat-number">5</div>
+        <div class="projects-stat-label">Completed Projects</div>
+      </div>
+      <div class="projects-stat-item">
+        <div class="projects-stat-number">2</div>
+        <div class="projects-stat-label">Ongoing Projects</div>
+      </div>
+      <div class="projects-stat-item">
+        <div class="projects-stat-number">10+</div>
+        <div class="projects-stat-label">Years Experience</div>
+      </div>
+      <div class="projects-stat-item">
+        <div class="projects-stat-number">50+</div>
+        <div class="projects-stat-label">Homes Built</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Completed Projects -->
+  <section class="container my-5 pb-4">
+    <div class="projects-section-header reveal">
+      <div class="icon-circle completed"><i class="bi bi-check-lg"></i></div>
+      <h3>COMPLETED PROJECTS</h3>
+      <div class="header-line"></div>
+      <span class="badge bg-success text-white px-3 py-2 rounded-pill fw-semibold" style="font-size: 0.65rem;">Delivered</span>
     </div>
 
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <!-- Left Side -->
-       <div class="col-md-6">
-          <div class="section section-full" style="background-image: url('6.jpg');">
-            <div class="overlay-text">APARTMENTS</div>
-          </div>
-        </div>
-    
-        <!-- Right Side -->
-        <div class="col-md-6">
-          <div class="section" style="background-image: url('https://images.homify.com/v1474404388/p/photo/image/1654117/Sanju_Southcity__Living_room_View01_1.jpg');">
-            <div class="overlay-text">2 BHK</div>
-          </div>
-          <div class="section" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5EzkyUFAdFxJkP7aXIe6Qy2joLkO5qj14dzXVPlSagklMeJok_rZDo-8CxGp9TVRtnDwlbdAs5pAKHj9gl_K_zPaV9BZC5qoa8L3BBL8pwsqzL5XgDILWQYBYubEXmT3k5SCLr7Llkj6eUjoT1dUOvKrC711h2zaEpw3tQWrfsViV1kBz-4iTVYLWjMw/s0/3d-exterior-design.jpg');">
-            <div class="overlay-text">3 BHK</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <!-- Left Image: Delivery Methods -->
-        <div class="col-md-6">
-          <div class="img-section" style="background-image: url('https://psgroup.in/blog/wp-content/uploads/2021/03/pexels-binyamin-mellish-106399-scaled.jpg');">
-            <div class="overlay-text">INDIVIDUAL HOUSES</div>
-          </div>
-        </div>
-  
-        <!-- Right Image: Preconstruction -->
-        <div class="col-md-6">
-          <div class="img-section" style="background-image: url('https://www.hiranandaniparks.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbanner-appartment.dfdb5306.jpg&w=3840&q=75');">
-            <div class="overlay-text">PREMIUM MULTI-BHK HOMES</div>
+    <div class="row g-4 stagger-children">
+      <!-- Royal Residence -->
+      <div class="col-lg-4 col-md-6 stagger-item reveal">
+        <div class="mega-card" style="background-image: url('Royal Residence.png');">
+          <div class="mega-card-number">01</div>
+          <div class="mega-card-content">
+            <div class="mega-card-tags">
+              <span class="mega-card-tag type">Apartments</span>
+              <span class="mega-card-tag status">Completed</span>
+            </div>
+            <h3 class="mega-card-title">Royal Residence</h3>
+            <p class="mega-card-desc">Premium 3BHK apartments with spacious layouts in a secure gated community.</p>
+            <div class="mega-card-hover-info">
+              <p>A thoughtfully designed residential block delivering standard luxury, ventilation, and modern finishes across all units.</p>
+            </div>
+            <div class="mega-card-specs">
+              <span class="mega-card-spec"><i class="bi bi-arrows-angle-expand"></i> 1,950 sqft</span>
+              <span class="mega-card-spec"><i class="bi bi-house-door"></i> 3 BHK</span>
+              <span class="mega-card-spec"><i class="bi bi-calendar-check"></i> 2025</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <!-- Left Image: Delivery Methods -->
-        <div class="col-md-6">
-          <div class="img-section" style="background-image: url('https://plus.unsplash.com/premium_photo-1661954372617-15780178eb2e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bHV4dXJ5JTIwaG91c2V8ZW58MHx8MHx8fDA%3D');">
-            <div class="overlay-text">PREMIUM VILLAS</div>
-          </div>
-        </div>
-  
-        <!-- Right Image: Preconstruction -->
-       <div class="col-md-6">
-          <div class="img-section" style="background-image: url('4.jpg');">
-            <div class="overlay-text">4BHK DUPLEX HOUSES</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-      <script>
-        const navbar = document.getElementById('mainNavbar');
-        const toggler = document.querySelector('.navbar-toggler');
-        const collapse = document.getElementById('navbarContent');
 
-        // Scroll background change
-        window.addEventListener('scroll', function () {
-          if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-          } else if (!collapse.classList.contains('show')) {
-            // Only remove 'scrolled' if menu is not open
-            navbar.classList.remove('scrolled');
+      <!-- Harivillu Signature City -->
+      <div class="col-lg-4 col-md-6 stagger-item reveal">
+        <div class="mega-card" style="background-image: url('Harivillu Signature City 1.png');">
+          <div class="mega-card-number">02</div>
+          <div class="mega-card-content">
+            <div class="mega-card-tags">
+              <span class="mega-card-tag type">Residential</span>
+              <span class="mega-card-tag status">Completed</span>
+            </div>
+            <h3 class="mega-card-title">Harivillu Signature City</h3>
+            <p class="mega-card-desc">Modern gated community with premium finishes and eco-friendly materials.</p>
+            <div class="mega-card-hover-info">
+              <p>A vibrant multi-family neighborhood designed for contemporary family living with state-of-the-art concrete finishes.</p>
+            </div>
+            <div class="mega-card-specs">
+              <span class="mega-card-spec"><i class="bi bi-arrows-angle-expand"></i> 1,800 sqft</span>
+              <span class="mega-card-spec"><i class="bi bi-house-door"></i> 3 BHK</span>
+              <span class="mega-card-spec"><i class="bi bi-calendar-check"></i> 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Harivillu Icon City - Villas -->
+      <div class="col-lg-4 col-md-6 stagger-item reveal">
+        <div class="mega-card" style="background-image: url('Harivillu Icon City - Villas.png');">
+          <div class="mega-card-number">03</div>
+          <div class="mega-card-content">
+            <div class="mega-card-tags">
+              <span class="mega-card-tag type">Villas</span>
+              <span class="mega-card-tag status">Completed</span>
+            </div>
+            <h3 class="mega-card-title">Icon City Villas</h3>
+            <p class="mega-card-desc">Luxury double-storey villas with private terraces and curated landscaping.</p>
+            <div class="mega-card-hover-info">
+              <p>Built to premium design codes, every villa offers an elevated lifestyle with space, privacy, and architectural sophistication.</p>
+            </div>
+            <div class="mega-card-specs">
+              <span class="mega-card-spec"><i class="bi bi-arrows-angle-expand"></i> 3,200 sqft</span>
+              <span class="mega-card-spec"><i class="bi bi-house-door"></i> 4 BHK</span>
+              <span class="mega-card-spec"><i class="bi bi-calendar-check"></i> 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Icon City - Individual House -->
+      <div class="col-lg-4 col-md-6 stagger-item reveal">
+        <div class="mega-card" style="background-image: url('Harivillu Icon City - Individual House.png');">
+          <div class="mega-card-number">04</div>
+          <div class="mega-card-content">
+            <div class="mega-card-tags">
+              <span class="mega-card-tag type">Individual House</span>
+              <span class="mega-card-tag status">Completed</span>
+            </div>
+            <h3 class="mega-card-title">Icon City Individual House</h3>
+            <p class="mega-card-desc">Elegantly crafted independent home with modern facade design.</p>
+            <div class="mega-card-hover-info">
+              <p>Tailored to the unique needs of a growing family, featuring dedicated car parking, high structural durability, and premium finishes.</p>
+            </div>
+            <div class="mega-card-specs">
+              <span class="mega-card-spec"><i class="bi bi-arrows-angle-expand"></i> 2,200 sqft</span>
+              <span class="mega-card-spec"><i class="bi bi-house-door"></i> 3 BHK</span>
+              <span class="mega-card-spec"><i class="bi bi-calendar-check"></i> 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sri Residence -->
+      <div class="col-lg-4 col-md-6 stagger-item reveal">
+        <div class="mega-card" style="background-image: url('Sri Residence.png');">
+          <div class="mega-card-number">05</div>
+          <div class="mega-card-content">
+            <div class="mega-card-tags">
+              <span class="mega-card-tag type">Premium Living</span>
+              <span class="mega-card-tag status">Completed</span>
+            </div>
+            <h3 class="mega-card-title">Sri Residence</h3>
+            <p class="mega-card-desc">A landmark residential address redefining modern living.</p>
+            <div class="mega-card-hover-info">
+              <p>Premium vitrified flooring, modular electricals, sleek aluminum windows, and a secure gated entrance — every detail crafted for lasting value.</p>
+            </div>
+            <div class="mega-card-specs">
+              <span class="mega-card-spec"><i class="bi bi-arrows-angle-expand"></i> Premium</span>
+              <span class="mega-card-spec"><i class="bi bi-house-door"></i> 3 BHK</span>
+              <span class="mega-card-spec"><i class="bi bi-calendar-check"></i> New Launch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ongoing Projects -->
+  <section class="container my-5 pb-4">
+    <div class="projects-section-header reveal">
+      <div class="icon-circle ongoing"><i class="bi bi-cone-striped"></i></div>
+      <h3>ONGOING PROJECTS</h3>
+      <div class="header-line"></div>
+      <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold" style="font-size: 0.65rem;">Under Construction</span>
+    </div>
+
+    <div class="row g-4 stagger-children justify-content-center">
+      <!-- Fortune Prime -->
+      <div class="col-lg-4 col-md-6 stagger-item reveal">
+        <div class="mega-card" style="background-image: url('Fortune Prime - Elevation.jpeg');">
+          <div class="mega-card-number">06</div>
+          <div class="mega-card-content">
+            <div class="mega-card-tags">
+              <span class="mega-card-tag type">Apartments</span>
+              <span class="mega-card-tag status" style="background: linear-gradient(135deg, #ff7b00, #ffae00); color: #fff;">Ongoing</span>
+            </div>
+            <h3 class="mega-card-title">Fortune Prime</h3>
+            <p class="mega-card-desc">Premium luxury high-rise apartments with state-of-the-art facilities.</p>
+            <div class="mega-card-hover-info">
+              <p>Offering 3BHK & 4BHK residences with architectural facade lighting, modern clubhouses, and top-tier amenities. A landmark vertical living experience.</p>
+            </div>
+            <div class="mega-card-specs">
+              <span class="mega-card-spec"><i class="bi bi-arrows-angle-expand"></i> 2,200 sqft</span>
+              <span class="mega-card-spec"><i class="bi bi-house-door"></i> 3 & 4 BHK</span>
+              <span class="mega-card-spec"><i class="bi bi-calendar-event"></i> Est: 2027</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TSR Prime -->
+      <div class="col-lg-4 col-md-6 stagger-item reveal">
+        <div class="mega-card" style="background-image: url('TSR Prime - Lay Out.jpeg');">
+          <div class="mega-card-number">07</div>
+          <div class="mega-card-content">
+            <div class="mega-card-tags">
+              <span class="mega-card-tag type">Villas</span>
+              <span class="mega-card-tag status" style="background: linear-gradient(135deg, #ff7b00, #ffae00); color: #fff;">Ongoing</span>
+            </div>
+            <h3 class="mega-card-title">TSR Prime</h3>
+            <p class="mega-card-desc">Eco-friendly luxury villas with sustainable green-building materials.</p>
+            <div class="mega-card-hover-info">
+              <p>Customizable floor plans, custom landscapes, and premium finishes. A new benchmark for conscious, sustainable luxury living in Amaravati.</p>
+            </div>
+            <div class="mega-card-specs">
+              <span class="mega-card-spec"><i class="bi bi-arrows-angle-expand"></i> 3,100 sqft</span>
+              <span class="mega-card-spec"><i class="bi bi-house-door"></i> 4 BHK</span>
+              <span class="mega-card-spec"><i class="bi bi-calendar-event"></i> Est: 2027</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner my-5 py-5">
+    <div class="container py-5 text-center reveal">
+      <h2 class="fw-bold mb-3" style="font-size: 2.2rem;">Interested in a Similar Project?</h2>
+      <p class="mb-4" style="max-width: 500px; margin-left: auto; margin-right: auto;">Let's discuss how we can bring your vision to life. Get in touch with our team today.</p>
+      <a href="contact.html" class="btn-premium btn-glow px-5 py-3" style="font-size: 0.9rem;">
+        Start Your Project <i class="bi bi-send-fill ms-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const navbar = document.getElementById('mainNavbar');
+    const collapse = document.getElementById('navbarContent');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else if (!collapse.classList.contains('show')) {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    collapse.addEventListener('show.bs.collapse', function () {
+      navbar.classList.add('scrolled');
+    });
+    collapse.addEventListener('hide.bs.collapse', function () {
+      if (window.scrollY < 50) {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll Reveal
+    document.addEventListener('DOMContentLoaded', function () {
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
           }
         });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => observer.observe(el));
+    });
+  </script>
 
-        // Collapse show/hide background toggle
-        collapse.addEventListener('show.bs.collapse', function () {
-          navbar.classList.add('scrolled'); // make background white
-        });
-
-        collapse.addEventListener('hide.bs.collapse', function () {
-          if (window.scrollY < 50) {
-            navbar.classList.remove('scrolled'); // revert to transparent if at top
-          }
-        });
-      </script>
-      <footer class="bg-light text-center text-dark py-5 mt-5">
-        <div class="container">
-      
-          <!-- Social Media Icons (Large + Spaced) -->
-          <div class="mb-4">
-              <a href="https://wa.me/919490562082" class="text-dark mx-3 fs-4"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://www.facebook.com/share/1GThsR6uwj/" class="text-dark mx-3 fs-4"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/cubeconstructions_official?utm_source=qr&igsh=dWhoN2J5MGo0MDhu" class="text-dark mx-3 fs-4"><i class="bi bi-instagram"></i></a>
-            <!-- <a href="#" class="text-dark mx-3 fs-4"><i class="bi bi-twitter"></i></a> -->
-          </div>
-    
-      
-          <!-- Navigation Links -->
-          <div class="mb-3 d-flex flex-column flex-md-row justify-content-center align-items-center text-center">
-            <a href="contact.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Contact</a>
-            <a href="subcontractors.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Subcontractors</a>
-            <a href="terms.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Terms of Service</a>
-            <a href="privacy.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Privacy Policy</a>
-          </div>
-          
-      
-          <!-- Company Info -->
-          <div class="text-muted fs-6">
-        © Cube Construction | All Rights Reserved.
+  <footer class="bg-light text-center text-dark py-5">
+    <div class="container">
+      <div class="mb-4">
+        <a href="https://wa.me/919490562082" class="text-dark mx-3 fs-4"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.facebook.com/share/1GThsR6uwj/" class="text-dark mx-3 fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/cubeconstructions_official?utm_source=qr&igsh=dWhoN2J5MGo0MDhu" class="text-dark mx-3 fs-4"><i class="bi bi-instagram"></i></a>
       </div>
-      
-        </div>
-      </footer>
+      <div class="mb-3 d-flex flex-column flex-md-row justify-content-center align-items-center text-center">
+        <a href="contact.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Contact</a>
+        <a href="subcontractors.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Subcontractors</a>
+        <a href="terms.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Terms of Service</a>
+        <a href="privacy.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Privacy Policy</a>
+      </div>
+      <div class="text-muted fs-6">&copy; Cube Construction | All Rights Reserved.</div>
+    </div>
+  </footer>
 </body>
 
 </html>

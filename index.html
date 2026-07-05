@@ -1,27 +1,22 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cube Constructions</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-
-  <!-- Custom CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome for WhatsApp icon -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Google Fonts (optional enhancement) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts (Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
   <style>
+    /* Image Grid and Gallery (unique to index page) */
     .img-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -35,9 +30,7 @@
       object-fit: cover;
     }
 
-    .grid-container {
-      padding: 20px;
-    }
+    .grid-container { padding: 20px; }
 
     @media (max-width: 768px) {
       .img-grid {
@@ -53,14 +46,8 @@
       overflow: hidden;
     }
 
-    .gallery-items img {
-      width: 100%;
-      display: none;
-    }
-
-    .gallery-slide.active {
-      display: block;
-    }
+    .gallery-items img { width: 100%; display: none; }
+    .gallery-slide.active { display: block; }
 
     .gallery-control {
       position: absolute;
@@ -74,18 +61,10 @@
       transform: translateY(-50%);
     }
 
-    .gallery-control.left {
-      left: 0;
-    }
+    .gallery-control.left { left: 0; }
+    .gallery-control.right { right: 0; }
 
-    .gallery-control.right {
-      right: 0;
-    }
-
-    .gallery-indicators {
-      text-align: center;
-      margin-top: 10px;
-    }
+    .gallery-indicators { text-align: center; margin-top: 10px; }
 
     .indicator {
       display: inline-block;
@@ -97,305 +76,11 @@
       cursor: pointer;
     }
 
-    .indicator.active {
-      background-color: #717171;
-    }
-/*     @media (max-width: 768px) {
-      .hero {
-        background-image: url('https://cubeconstructions.in/wp-content/uploads/2024/11/d899ee9c-ebed-4f97-a547-e54e9124619f-768x1024.jpg') !important;
-        background-size: 150% !important;
-      }
-    }
+    .indicator.active { background-color: #717171; }
 
-    .hero {
-      background-image: url('https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?cs=srgb&dl=pexels-binyaminmellish-186077.jpg&fm=jpg');
-
-    }
- */
-    /* Initial transparent navbar */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    @media (max-width: 576px) {
-      .hero h1 {
-        font-size: 1.8rem !important;
-        line-height: 1.4em;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    .navbar-toggler {
-      border: none;
-    }
-
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
-    }
-
-    .navbar-nav .nav-link {
-      color: white !important;
-    }
-
-
-    body,
-    html {
-      font-family: 'proxima-nova', Arial, Helvetica, sans-serif;
-      font-weight: 300;
-      font-style: normal;
-      font-size: 16px;
-      letter-spacing: .02em;
-      line-height: 1.5em;
-      color: #504f4f;
-      height: 100%;
-      background-color: #ffffff;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      animation: slideBg 15s infinite;
-    }
-
-    /* Overlay content style */
-    .hero .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      /* Dark overlay */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-    }
-
-    /* Keyframes for changing background images */
-    @keyframes slideBg {
-      0% {
-        background-image: url('Harivillu Icon City - Villas.png');
-      }
-
-      20% {
-        background-image: url('Harivillu Signature City 1.png');
-      }
-
-      40% {
-        background-image: url('Royal Residence.png');
-      }
-
-      60% {
-        background-image: url('Harivillu Icon City - Villas 2.png');
-      }
-      80% {
-        background-image: url('Harivillu Signature City 2.png');
-      }
-      100% {
-        background-image: url('Royal Residence 2.png');
-      }
-    }
-
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.1);
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .overlay h1 {
-      font-size: 3rem;
-      font-weight: 300;
-      color: rgb(255, 255, 255);
-      text-align: center;
-      padding: 20px 60px;
-      background: rgba(0, 0, 0, 0.3);
-      /* lighter transparency like the uploaded image */
-      backdrop-filter: blur(2px);
-      /* optional subtle blur behind text */
-      letter-spacing: 2px;
-      border-radius: 5px;
-      text-transform: uppercase;
-    }
-
-
-    .scroll-indicator {
-      margin-top: 20px;
-      font-size: 1.3rem;
-      color: #ccc;
-    }
-
-
-    /* Make footer elements responsive */
-    @media (max-width: 991.98px) {
-
-      .footer .container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-
-      .footer .mb-4 a {
-        font-size: 1.5rem;
-        margin: 0 10px;
-      }
-
-      .footer .mb-3 a {
-        font-size: 1rem;
-        margin: 1rem;
-      }
-
-      .footer .text-muted {
-        font-size: 0.875rem;
-      }
-
-      /* Stack social media icons vertically on mobile */
-      .footer .mb-4 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      /* Stack navigation links vertically on mobile */
-      .footer .mb-3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    #mainNavbar {
-      background-color: transparent;
-      transition: background-color 0.3s ease;
-    }
-
-    #mainNavbar .nav-link,
-    #mainNavbar .navbar-brand strong,
-    #mainNavbar .navbar-brand span {
-      color: rgb(70, 70, 70);
-      transition: color 0.3s ease;
-    }
-
-    /* On scroll: background black + text white */
-    #mainNavbar.scrolled {
-      background-color: rgb(70, 70, 70) !important;
-    }
-
-    #mainNavbar.scrolled .nav-link,
-    #mainNavbar.scrolled .navbar-brand strong,
-    #mainNavbar.scrolled .navbar-brand span {
-      color: white;
-    }
-
-    /* Hover underline */
-    .nav-link {
-      position: relative;
-    }
-
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
-      background-color: currentColor;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-
-    .nav-link:hover::after {
-      transform: scaleX(1);
-    }
-
-    .navbar-brand strong {
-      font-size: 1.5rem;
-    }
-
-    .navbar-brand span {
-      font-size: 0.8rem;
-      display: block;
-      line-height: 1;
-    }
-
-    /* Default: black icon on light background */
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-
-    /* White icon when navbar is scrolled (dark background) */
-    #mainNavbar.scrolled .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-
-    @media (max-width: 991.98px) {
-
-      #mainNavbar {
-        background-color: rgb(70, 70, 70);
-        transition: background-color 0.3s ease;
-      }
-
-      #mainNavbar .nav-link,
-      #mainNavbar .navbar-brand strong,
-      #mainNavbar .navbar-brand span {
-        color: white;
-        transition: color 0.3s ease;
-      }
-
-      .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-      }
-
-      .whatsapp-float {
-        bottom: 30% !important;
-        right: 10px !important;
-      }
-    }
-
-
-    .whatsapp-float {
-      height: 40px;
-      width: 40px;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      background-color: #25d366;
-      color: white;
-      text-align: center;
-      border-radius: 45% 45%;
-      padding-top: 4px;
-      font-size: 24px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-      background-color: #1ebd5a;
-      color: white;
-      text-decoration: none;
-    }
+    /* Hero background rotation defined in styles.css (.hero-bg-rotate) */
 
   </style>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap JS (for toggling, dropdowns, etc.) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 
 </head>
 
@@ -405,7 +90,7 @@
   <header>
     <nav class="navbar navbar-expand-lg fixed-top p-3" id="mainNavbar">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center text-white" href="#">
+        <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
           <img src="5.png" alt="Logo" height="50">
           <div class="ms-2">
             <strong>CUBE</strong><br><span style="font-size: 0.8rem;">CONSTRUCTIONS</span>
@@ -419,8 +104,8 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
           <div class="d-lg-none text-end w-100 mb-2">
-            <button type="button" class="btn btn-sm btn-danger me-3 mt-2" onclick="bootstrap.Collapse.getInstance(document.getElementById('navbarContent')).hide();">
-              &times; Close
+            <button type="button" class="mobile-close-btn" onclick="bootstrap.Collapse.getInstance(document.getElementById('navbarContent')).hide();">
+              <i class="bi bi-x-lg"></i>
             </button>
           </div>
           <ul class="navbar-nav">
@@ -435,59 +120,120 @@
     </nav>
   </header>
 
-  <section class="hero home-hero">
+  <section class="hero home-hero hero-bg-rotate" id="home-hero">
     <div class="overlay">
-      <h1><b>Welcome To Cube Constructions</b></h1>
-    </div>
-
-    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
-      <a href="services.html" class="btn bg-dark text-white px-4 py-2 fw-semibold shadow">
-        Explore More
+      <div class="hero-badge">&#9679; Trusted Since 2014</div>
+      <h1 class="hero-title">
+        Welcome To<br><span>Cube Constructions</span>
+      </h1>
+      <p class="hero-subtitle">A Tradition of Excellence in Residential Construction</p>
+      <a href="services.html" class="btn-premium btn-glow hero-cta-btn px-5 py-3" style="font-size: 0.9rem;">
+        Explore Our Work <i class="bi bi-arrow-right ms-2"></i>
       </a>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <i class="bi bi-chevron-down"></i>
+      </div>
     </div>
-
   </section>
 <a href="https://wa.me/919490562082" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- About Cube -->
-  <section class="container my-5" id="career">
-    <div class="row justify-content-center p-4">
-      <div class="col-lg-8 text-justify">
-        <h2 class="mb-4 font-weight-bold text-center">CUBE CONSTRUCTIONS, A Tradition of Excellence</h2>
-        <p> Cube Constructions, headquartered in Vijayawada, is a trusted name in residential construction, offering
-          expertly crafted group houses, apartments, villas, and individual homes. We combine innovation, quality
-          craftsmanship, and a customer-focused approach to bring your dream home to life. </p>
-        <p> Our projects are designed with attention to detail, ensuring structural integrity, aesthetic appeal, and
-          modern amenities. We are committed to sustainability and strive to create living spaces that elevate
-          lifestyles and strengthen communities. </p>
-        <p> With a dedication to timely delivery and excellence in every phase of development, Cube Constructions
-          continues to build not just homes, but lasting relationships and vibrant neighborhoods. </p> <a
-          href="about.html" class="btn btn-primary mt-3 bg-dark text-white">Read Our Story</a>
+  <!-- About Cube - Split Layout -->
+  <section class="my-5 py-4" id="career">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-left">
+          <div class="split-section-img" style="background-image: url('Royal Residence.png');">
+            <div class="img-overlay-decoration"></div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-right">
+          <span class="text-uppercase fw-bold text-gradient" style="font-size: 0.8rem; letter-spacing: 2px;">About Us</span>
+          <h2 class="fw-bold mt-2 mb-4" style="font-size: 2rem; color: #1a1a1a;">CUBE CONSTRUCTIONS,<br>A Tradition of Excellence</h2>
+          <div class="section-divider-wide"></div>
+          <p class="mt-4 text-secondary" style="line-height: 1.8;">Cube Constructions, headquartered in Vijayawada, is a trusted name in residential construction, offering expertly crafted group houses, apartments, villas, and individual homes. We combine innovation, quality craftsmanship, and a customer-focused approach to bring your dream home to life.</p>
+          <p class="text-secondary" style="line-height: 1.8;">Our projects are designed with attention to detail, ensuring structural integrity, aesthetic appeal, and modern amenities. We are committed to sustainability and strive to create living spaces that elevate lifestyles and strengthen communities.</p>
+          <p class="text-secondary" style="line-height: 1.8;">With a dedication to timely delivery and excellence in every phase of development, Cube Constructions continues to build not just homes, but lasting relationships and vibrant neighborhoods.</p>
+          <a href="about.html" class="btn-premium mt-3">Read Our Story <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
       </div>
     </div>
   </section>
-  <!-- Shadow Line Separator -->
-  <div class="mx-auto my-4 bg-primary shadow-sm rounded" style="height: 4px; width: 80px;"></div>
 
-  <!-- Services Section -->
-  <section class="container my-5">
-    <div class="row justify-content-center p-4">
-      <div class="col-lg-8 text-justify">
-        <h2 class="mb-4 font-weight-bold text-center">We Offer a Wide Range of Services</h2>
-        <p>
-          At Cube Constructions, we take pride in providing end-to-end construction solutions—from planning to project
-          handover—through a dedicated team of architects, engineers, project managers, and skilled professionals who
-          prioritize client satisfaction above all.
-        </p>
-        <p>
-          Our portfolio includes a diverse array of residential and commercial projects, and we excel in various
-          construction methodologies. By combining time-tested practices with modern techniques and technologies, we
-          ensure that every project we undertake is delivered with the highest standards of quality, efficiency, and
-          value.
-        </p>
-        <a href="services.html" class="btn btn-success mt-3 bg-dark text-white">Explore Our Services</a>
+  <!-- Services Section - Split Layout (reversed) -->
+  <section class="my-5 py-4">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 order-lg-2 reveal-right">
+          <div class="split-section-img" style="background-image: url('Harivillu Icon City - Villas.png');">
+            <div class="img-overlay-decoration" style="bottom: -15px; left: -15px; right: auto;"></div>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1 reveal-left">
+          <span class="text-uppercase fw-bold text-gradient" style="font-size: 0.8rem; letter-spacing: 2px;">What We Do</span>
+          <h2 class="fw-bold mt-2 mb-4" style="font-size: 2rem; color: #1a1a1a;">We Offer a Wide Range<br>of Services</h2>
+          <div class="section-divider-wide"></div>
+          <p class="mt-4 text-secondary" style="line-height: 1.8;">At Cube Constructions, we take pride in providing end-to-end construction solutions—from planning to project handover—through a dedicated team of architects, engineers, project managers, and skilled professionals who prioritize client satisfaction above all.</p>
+          <p class="text-secondary" style="line-height: 1.8;">Our portfolio includes a diverse array of residential and commercial projects, and we excel in various construction methodologies. By combining time-tested practices with modern techniques and technologies, we ensure that every project we undertake is delivered with the highest standards of quality, efficiency, and value.</p>
+          <a href="services.html" class="btn-premium mt-3">Explore Our Services <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Project: Sri Residence -->
+  <section class="featured-project-section" id="featured-project">
+    <div class="featured-project-grid">
+      <!-- Visual Side -->
+      <div class="featured-project-visual reveal-left">
+        <img src="Sri Residence.png" alt="Sri Residence - Premium Residential Development">
+        <div class="visual-accent"></div>
+        <div class="featured-project-float-badge">
+          <div class="badge-icon">
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <div class="badge-text">
+            <small>Featured Project</small>
+            <strong>Premium Living</strong>
+          </div>
+        </div>
+      </div>
+      <!-- Content Side -->
+      <div class="featured-project-content reveal-right">
+        <div class="content-inner">
+          <span class="section-label">Introducing</span>
+          <h2>Sri <span class="highlight">Residence</span></h2>
+          <p class="project-tagline">Where architectural brilliance meets everyday luxury — a landmark residential address redefining modern living in Vijayawada.</p>
+
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="bi bi-arrows-angle-expand"></i>
+              <span>Spacious Layouts</span>
+            </div>
+            <div class="highlight-item">
+              <i class="bi bi-sun"></i>
+              <span>Vastu Compliant</span>
+            </div>
+            <div class="highlight-item">
+              <i class="bi bi-shield-check"></i>
+              <span>RCC Frame Structure</span>
+            </div>
+            <div class="highlight-item">
+              <i class="bi bi-tree"></i>
+              <span>Green Surroundings</span>
+            </div>
+          </div>
+
+          <p class="project-description">
+            Sri Residence is more than a building — it’s a statement of refined taste. From its striking elevation to its thoughtfully planned interiors, every square foot is crafted to offer comfort, class, and lasting value. Designed with premium vitrified flooring, modular electricals, sleek aluminum windows, and a secure gated entrance, this residence sets a new benchmark for quality living in a prime Vijayawada locale.
+          </p>
+
+          <a href="projects.html" class="btn-premium mt-3">
+            View Project Details <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -495,7 +241,7 @@
   <!-- Projects Showcase Section -->
   <section class="py-5 bg-light" id="projects-showcase">
     <div class="container">
-      <div class="row justify-content-center text-center mb-5">
+      <div class="row justify-content-center text-center mb-5 reveal">
         <div class="col-lg-9">
           <span class="text-uppercase fw-bold text-warning letter-spacing-1" style="font-size: 0.85rem;">Our Portfolio</span>
           <h2 class="projects-section-title d-block mt-2">PROJECT SHOWCASE</h2>
@@ -505,162 +251,9 @@
         </div>
       </div>
 
-      <!-- Ongoing Projects Sub-section -->
-      <div class="row mb-5">
-        <div class="col-12 mb-4">
-          <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
-            <h3 class="fw-bold m-0" style="font-size: 1.5rem; letter-spacing: 0.5px; color: #1a1a1a;">
-              <i class="bi bi-cone-striped text-warning me-2"></i> Ongoing Projects
-            </h3>
-            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold">Under Construction</span>
-          </div>
-        </div>
-        <!-- Card 1: Fortune Prime - Elevation -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <span class="project-badge">Apartments</span>
-            <span class="project-status-badge status-ongoing">Ongoing</span>
-            <div class="project-img-wrapper">
-              <img src="Fortune Prime - Elevation.jpeg" alt="Fortune Prime - Elevation">
-            </div>
-            <div class="project-body">
-              <div>
-                <h4 class="project-title">Fortune Prime - Elevation</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-warning"></i> Vijayawada, AP
-                </div>
-                <p class="project-desc">
-                  Premium luxury high-rise apartments offering 3BHK state-of-the-art residences with modern lifestyle clubhouses and facilities.
-                </p>
-              </div>
-              <div>
-                <div class="project-progress-container">
-                  <div class="progress-label">
-                    <span>Construction Progress</span>
-                    <span>75%</span>
-                  </div>
-                  <div class="project-progress-bar-bg">
-                    <div class="project-progress-bar-fill" style="width: 75%;"></div>
-                  </div>
-                </div>
-                <div class="project-specs">
-                  <div class="spec-item">
-                    <i class="bi bi-arrows-angle-expand"></i>
-                    <span class="spec-val">1,850 sqft</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-house-door"></i>
-                    <span class="spec-val">3 BHK</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-calendar-event"></i>
-                    <span class="spec-val">Est: 2027</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: Fortune Prime - Night View -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <span class="project-badge">Apartments</span>
-            <span class="project-status-badge status-ongoing">Ongoing</span>
-            <div class="project-img-wrapper">
-              <img src="Fortune Prime - Elevation - Night View.jpeg" alt="Fortune Prime - Night View">
-            </div>
-            <div class="project-body">
-              <div>
-                <h4 class="project-title">Fortune Prime - Night View</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-warning"></i> Vijayawada, AP
-                </div>
-                <p class="project-desc">
-                  A scenic night elevation of Fortune Prime showcasing state-of-the-art architectural facade lighting, modern entrance design, and luxury features.
-                </p>
-              </div>
-              <div>
-                <div class="project-progress-container">
-                  <div class="progress-label">
-                    <span>Construction Progress</span>
-                    <span>80%</span>
-                  </div>
-                  <div class="project-progress-bar-bg">
-                    <div class="project-progress-bar-fill" style="width: 80%;"></div>
-                  </div>
-                </div>
-                <div class="project-specs">
-                  <div class="spec-item">
-                    <i class="bi bi-arrows-angle-expand"></i>
-                    <span class="spec-val">2,200 sqft</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-house-door"></i>
-                    <span class="spec-val">3 & 4 BHK</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-calendar-event"></i>
-                    <span class="spec-val">Est: 2027</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: TSR Prime -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <span class="project-badge">Villas</span>
-            <span class="project-status-badge status-ongoing">Ongoing</span>
-            <div class="project-img-wrapper">
-              <img src="TSR Prime - Lay Out.jpeg" alt="TSR Prime - Layout">
-            </div>
-            <div class="project-body">
-              <div>
-                <h4 class="project-title">TSR Prime</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-warning"></i> Amaravati, AP
-                </div>
-                <p class="project-desc">
-                  Eco-friendly individual luxury villas built with sustainable green-building materials, customizable floor plans, and custom landscapes.
-                </p>
-              </div>
-              <div>
-                <div class="project-progress-container">
-                  <div class="progress-label">
-                    <span>Construction Progress</span>
-                    <span>50%</span>
-                  </div>
-                  <div class="project-progress-bar-bg">
-                    <div class="project-progress-bar-fill" style="width: 50%;"></div>
-                  </div>
-                </div>
-                <div class="project-specs">
-                  <div class="spec-item">
-                    <i class="bi bi-arrows-angle-expand"></i>
-                    <span class="spec-val">3,100 sqft</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-house-door"></i>
-                    <span class="spec-val">4 BHK</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-calendar-event"></i>
-                    <span class="spec-val">Est: 2027</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Completed Projects Sub-section -->
-      <div class="row">
-        <div class="col-12 mb-4 mt-2">
+      <!-- Completed Projects Sub-section (shown first) -->
+      <div class="row stagger-children">
+        <div class="col-12 mb-4 reveal">
           <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
             <h3 class="fw-bold m-0" style="font-size: 1.5rem; letter-spacing: 0.5px; color: #1a1a1a;">
               <i class="bi bi-check-circle-fill text-success me-2"></i> Completed Projects
@@ -669,8 +262,8 @@
           </div>
         </div>
 
-        <!-- Card 1: Royal Residence -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <!-- Royal Residence -->
+        <div class="col-lg-4 col-md-6 mb-4 stagger-item reveal">
           <div class="project-card">
             <span class="project-badge">Apartments</span>
             <span class="project-status-badge status-completed">Completed</span>
@@ -680,9 +273,6 @@
             <div class="project-body">
               <div>
                 <h4 class="project-title">Royal Residence</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
-                </div>
                 <p class="project-desc">
                   A premium residential apartment block designed with standard luxury, offering spaciously ventilated 3BHK flats within a secure gated community.
                 </p>
@@ -707,58 +297,17 @@
           </div>
         </div>
 
-        <!-- Card 2: Royal Residence 2 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <span class="project-badge">Apartments</span>
-            <span class="project-status-badge status-completed">Completed</span>
-            <div class="project-img-wrapper">
-              <img src="Royal Residence 2.png" alt="Royal Residence 2">
-            </div>
-            <div class="project-body">
-              <div>
-                <h4 class="project-title">Royal Residence 2</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
-                </div>
-                <p class="project-desc">
-                  Phase 2 of the prestigious Royal Residence project, adding ultra-modern exterior finishes, smart home integrations, and private parking slots.
-                </p>
-              </div>
-              <div>
-                <div class="project-specs">
-                  <div class="spec-item">
-                    <i class="bi bi-arrows-angle-expand"></i>
-                    <span class="spec-val">2,100 sqft</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-house-door"></i>
-                    <span class="spec-val">3 BHK</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-calendar-check"></i>
-                    <span class="spec-val">Delivered: 2025</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: Harivillu Signature City 1 -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <!-- Harivillu Signature City -->
+        <div class="col-lg-4 col-md-6 mb-4 stagger-item reveal">
           <div class="project-card">
             <span class="project-badge">Residential</span>
             <span class="project-status-badge status-completed">Completed</span>
             <div class="project-img-wrapper">
-              <img src="Harivillu Signature City 1.png" alt="Harivillu Signature City 1">
+              <img src="Harivillu Signature City 1.png" alt="Harivillu Signature City">
             </div>
             <div class="project-body">
               <div>
-                <h4 class="project-title">Harivillu Signature City 1</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
-                </div>
+                <h4 class="project-title">Harivillu Signature City</h4>
                 <p class="project-desc">
                   Modern premium multi-family gated community residences, featuring state-of-the-art concrete finishes and modern eco-friendly materials.
                 </p>
@@ -783,46 +332,8 @@
           </div>
         </div>
 
-        <!-- Card 4: Harivillu Signature City 2 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <span class="project-badge">Residential</span>
-            <span class="project-status-badge status-completed">Completed</span>
-            <div class="project-img-wrapper">
-              <img src="Harivillu Signature City 2.png" alt="Harivillu Signature City 2">
-            </div>
-            <div class="project-body">
-              <div>
-                <h4 class="project-title">Harivillu Signature City 2</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
-                </div>
-                <p class="project-desc">
-                  The second phase of Signature City, expanding the residential area with green walkways, recreational parks, and community clubhouses.
-                </p>
-              </div>
-              <div>
-                <div class="project-specs">
-                  <div class="spec-item">
-                    <i class="bi bi-arrows-angle-expand"></i>
-                    <span class="spec-val">1,850 sqft</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-house-door"></i>
-                    <span class="spec-val">3 BHK</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-calendar-check"></i>
-                    <span class="spec-val">Delivered: 2024</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5: Harivillu Icon City - Villas -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <!-- Harivillu Icon City - Villas -->
+        <div class="col-lg-4 col-md-6 mb-4 stagger-item reveal">
           <div class="project-card">
             <span class="project-badge">Villas</span>
             <span class="project-status-badge status-completed">Completed</span>
@@ -832,9 +343,6 @@
             <div class="project-body">
               <div>
                 <h4 class="project-title">Harivillu Icon City - Villas</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
-                </div>
                 <p class="project-desc">
                   Luxury individual double-storey villas built to premium design codes. Every villa includes private terrace space and landscaping.
                 </p>
@@ -859,58 +367,17 @@
           </div>
         </div>
 
-        <!-- Card 6: Harivillu Icon City - Villas 2 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <span class="project-badge">Villas</span>
-            <span class="project-status-badge status-completed">Completed</span>
-            <div class="project-img-wrapper">
-              <img src="Harivillu Icon City - Villas 2.png" alt="Harivillu Icon City - Villas 2">
-            </div>
-            <div class="project-body">
-              <div>
-                <h4 class="project-title">Harivillu Icon City - Villas 2</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
-                </div>
-                <p class="project-desc">
-                  Contemporary villa layouts optimized for maximum natural light, premium fittings, and architectural vastu compliance.
-                </p>
-              </div>
-              <div>
-                <div class="project-specs">
-                  <div class="spec-item">
-                    <i class="bi bi-arrows-angle-expand"></i>
-                    <span class="spec-val">3,400 sqft</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-house-door"></i>
-                    <span class="spec-val">4 BHK</span>
-                  </div>
-                  <div class="spec-item">
-                    <i class="bi bi-calendar-check"></i>
-                    <span class="spec-val">Delivered: 2025</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 7: Harivillu Icon City - Individual House (Centered) -->
-        <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 mb-4">
+        <!-- Icon City - Individual House -->
+        <div class="col-lg-4 offset-lg-0 col-md-6 mb-4 stagger-item reveal">
           <div class="project-card">
             <span class="project-badge">Individual House</span>
             <span class="project-status-badge status-completed">Completed</span>
             <div class="project-img-wrapper">
-              <img src="Harivillu Icon City - Individual House.png" alt="Harivillu Icon City - Individual House">
+              <img src="Harivillu Icon City - Individual House.png" alt="Icon City - Individual House">
             </div>
             <div class="project-body">
               <div>
                 <h4 class="project-title">Icon City - Individual House</h4>
-                <div class="project-location">
-                  <i class="bi bi-geo-alt-fill text-success"></i> Vijayawada, AP
-                </div>
                 <p class="project-desc">
                   An elegantly crafted independent home showcasing modern facade design, dedicated car parking, and high structural durability.
                 </p>
@@ -934,11 +401,127 @@
             </div>
           </div>
         </div>
+
+        <!-- Sri Residence -->
+        <div class="col-lg-4 col-md-6 mb-4 stagger-item reveal">
+          <div class="project-card">
+            <span class="project-badge">Premium Living</span>
+            <span class="project-status-badge status-completed">Completed</span>
+            <div class="project-img-wrapper">
+              <img src="Sri Residence.png" alt="Sri Residence">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Sri Residence</h4>
+                <p class="project-desc">
+                  A landmark residential address redefining modern living. Premium vitrified flooring, modular electricals, sleek aluminum windows, and a secure gated entrance.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">Premium</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">3 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <span class="spec-val">New Launch</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="row mt-4 text-center">
+      <!-- Ongoing Projects Sub-section (shown second) -->
+      <div class="row mb-5 stagger-children">
+        <div class="col-12 mb-4 mt-2 reveal">
+          <div class="d-flex align-items-center justify-content-between border-bottom pb-3">
+            <h3 class="fw-bold m-0" style="font-size: 1.5rem; letter-spacing: 0.5px; color: #1a1a1a;">
+              <i class="bi bi-cone-striped text-warning me-2"></i> Ongoing Projects
+            </h3>
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold">Under Construction</span>
+          </div>
+        </div>
+        <!-- Fortune Prime -->
+        <div class="col-lg-4 col-md-6 mb-4 stagger-item reveal">
+          <div class="project-card">
+            <span class="project-badge">Apartments</span>
+            <span class="project-status-badge status-ongoing">Ongoing</span>
+            <div class="project-img-wrapper">
+              <img src="Fortune Prime - Elevation.jpeg" alt="Fortune Prime">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">Fortune Prime</h4>
+                <p class="project-desc">
+                  Premium luxury high-rise apartments offering 3BHK & 4BHK state-of-the-art residences with modern lifestyle clubhouses, architectural facade lighting, and top-tier facilities. A landmark vertical living experience underway in Vijayawada.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">2,200 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">3 & 4 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-event"></i>
+                    <span class="spec-val">Est: 2027</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TSR Prime -->
+        <div class="col-lg-4 col-md-6 mb-4 stagger-item reveal">
+          <div class="project-card">
+            <span class="project-badge">Villas</span>
+            <span class="project-status-badge status-ongoing">Ongoing</span>
+            <div class="project-img-wrapper">
+              <img src="TSR Prime - Lay Out.jpeg" alt="TSR Prime - Layout">
+            </div>
+            <div class="project-body">
+              <div>
+                <h4 class="project-title">TSR Prime</h4>
+                <p class="project-desc">
+                  Eco-friendly individual luxury villas built with sustainable green-building materials, customizable floor plans, and custom landscapes.
+                </p>
+              </div>
+              <div>
+                <div class="project-specs">
+                  <div class="spec-item">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                    <span class="spec-val">3,100 sqft</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-house-door"></i>
+                    <span class="spec-val">4 BHK</span>
+                  </div>
+                  <div class="spec-item">
+                    <i class="bi bi-calendar-event"></i>
+                    <span class="spec-val">Est: 2027</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4 text-center reveal">
         <div class="col-12">
-          <a href="projects.html" class="btn btn-dark btn-lg px-4 py-2 mt-3 shadow-sm fw-semibold" style="font-size: 0.95rem; border-radius: 30px;">
+          <a href="projects.html" class="btn-premium btn-glow px-5 py-3" style="font-size: 0.9rem;">
             Explore All Projects <i class="bi bi-arrow-right ms-2"></i>
           </a>
         </div>
@@ -946,23 +529,18 @@
     </div>
   </section>
 
-  <!-- Shadow Line Separator -->
-  <div class="mx-auto my-4 bg-primary shadow-sm rounded" style="height: 4px; width: 80px;"></div>
-
-
-  <section class="container my-5" id="career">
-    <div class="row justify-content-center p-4">
-      <div class="col-lg-8">
-        <h2 class="mb-4 font-weight-bold text-center">Contact Us</h2>
-        <p>
-          We’d love to discuss your upcoming project!</p>
-
-        <a href="contact.html" class="btn btn-primary mt-3 bg-dark text-white">GET IN TOUCH</a>
-      </div>
+  <!-- Contact CTA - Full Width Banner -->
+  <section class="cta-banner py-5" id="career">
+    <div class="container py-5 text-center reveal">
+      <h2 class="fw-bold mb-3" style="font-size: 2.2rem;">Ready to Build Your Dream Home?</h2>
+      <p class="mb-4" style="max-width: 500px; margin-left: auto; margin-right: auto;">We'd love to discuss your upcoming project. Get in touch with our team today.</p>
+      <a href="contact.html" class="btn-premium btn-glow px-5 py-3" style="font-size: 0.9rem;">
+        Get In Touch <i class="bi bi-send-fill ms-2"></i>
+      </a>
     </div>
   </section>
 
-  <footer class="bg-light text-center text-dark py-5 mt-5">
+  <footer class="bg-light text-center text-dark py-5">
     <div class="container">
 
       <!-- Social Media Icons (Large + Spaced) -->
@@ -997,27 +575,40 @@
       if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
       } else if (!collapse.classList.contains('show')) {
-        // Only remove 'scrolled' if menu is not open
         navbar.classList.remove('scrolled');
       }
     });
 
-    // Collapse show/hide background toggle
     collapse.addEventListener('show.bs.collapse', function () {
-      navbar.classList.add('scrolled'); // make background white
+      navbar.classList.add('scrolled');
     });
 
     collapse.addEventListener('hide.bs.collapse', function () {
       if (window.scrollY < 50) {
-        navbar.classList.remove('scrolled'); // revert to transparent if at top
+        navbar.classList.remove('scrolled');
       }
     });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+KkMtx5Y+QGp9u+5E/1Gd94YvK1yR"
-    crossorigin="anonymous"></script>
+    // Scroll Reveal IntersectionObserver
+    document.addEventListener('DOMContentLoaded', function () {
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
