@@ -2426,17 +2426,19 @@ padding-top: 4px;
   }
 }
 
-/* Navbar collapse drawer gets a subtle slide fade via opacity
+/* Mobile-only: Navbar collapse drawer gets a subtle slide fade via opacity
    (Bootstrap handles the height transition natively) */
-.navbar-collapse:not(.show) {
-  opacity: 0;
-  transform: translateY(-8px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+@media (max-width: 991.98px) {
+  .navbar-collapse:not(.show) {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
 
-.navbar-collapse.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  .navbar-collapse.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
 }
 
