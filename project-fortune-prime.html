@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cube Constructions - Fortune Prime</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .project-detail-hero { height: 70vh; min-height: 500px; background-size: cover; background-position: center; position: relative; }
+    .project-detail-hero .overlay { background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); }
+    .project-detail-body { padding: 4rem 0; }
+    .project-detail-body h2 { font-size: 2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 1.5rem; }
+    .project-detail-body h2::after { content: ''; display: block; width: 60px; height: 4px; background: linear-gradient(90deg, #ff7b00, #ffae00); border-radius: 2px; margin-top: 0.75rem; }
+    .project-detail-body p { color: #5a5a5a; line-height: 1.8; font-size: 1rem; }
+    .detail-specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+    .detail-spec-item { background: #ffffff; border-radius: 16px; padding: 1.5rem; text-align: center; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: all 0.3s ease; }
+    .detail-spec-item:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); border-color: rgba(255,123,0,0.15); }
+    .detail-spec-item i { font-size: 2rem; color: #ff7b00; margin-bottom: 0.75rem; }
+    .detail-spec-item h5 { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .detail-spec-item span { font-size: 0.85rem; color: #6c757d; }
+    .detail-gallery-img { border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06); transition: transform 0.4s ease; }
+    .detail-gallery-img:hover { transform: scale(1.02); }
+    .detail-gallery-img img { width: 100%; height: 280px; object-fit: cover; display: block; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: #ff7b00; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: gap 0.3s ease; }
+    .back-link:hover { gap: 12px; color: #e06e00; }
+    @media (max-width: 767.98px) { .project-detail-hero { height: 50vh; min-height: 350px; } .project-detail-body { padding: 2rem 0; } .detail-specs-grid { grid-template-columns: 1fr 1fr; } .detail-gallery-img img { height: 200px; } }
+    @media (max-width: 575.98px) { .detail-specs-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top p-3" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+          <img src="5.png" alt="Logo" height="50">
+          <div class="ms-2"><strong>CUBE</strong><br><span style="font-size: 0.8rem;">CONSTRUCTIONS</span></div>
+        </a>
+        <button class="navbar-toggler white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <div class="d-lg-none text-end w-100 mb-2">
+            <button type="button" class="mobile-close-btn" onclick="bootstrap.Collapse.getInstance(document.getElementById('navbarContent')).hide();"><i class="bi bi-x-lg"></i></button>
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="about.html">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="services.html">SERVICES</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="projects.html">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="project-detail-hero" style="background-image: url('Fortune Prime - Elevation.jpeg');">
+    <div class="overlay d-flex flex-column justify-content-center align-items-center text-center">
+      <span class="text-uppercase fw-bold text-gradient mb-2" style="font-size: 0.8rem; letter-spacing: 3px;">Ongoing Project</span>
+      <h1 class="text-white fw-bold" style="font-size: 3.5rem; letter-spacing: 2px;">FORTUNE <span class="text-gradient">PRIME</span></h1>
+      <p class="text-white-50" style="font-size: 1.1rem; max-width: 500px;">Premium Residential Apartment Project in Nidamanuru, Vijayawada</p>
+    </div>
+  </section>
+
+  <a href="https://wa.me/919490562082" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+  <section class="project-detail-body">
+    <div class="container">
+      <a href="projects.html" class="back-link mb-4 d-inline-block"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <h2>Project Overview</h2>
+          <p><strong>Fortune Prime</strong> is a premium residential apartment project located in Nidamanuru, Vijayawada. Spread across approximately 1,850 sq. yds. with a total built-up area of around 48,000 sq. ft., this landmark development features 30 well-designed 2 BHK apartments that embody modern living, comfort, and long-term value.</p>
+          <p>Fortune Prime showcases an elegant elevation with contemporary design language that sets a new benchmark for residential architecture in the region. Each apartment is thoughtfully planned with efficient layouts, premium finishes, and abundant natural light and ventilation.</p>
+          <p>With its strategic location, superior construction quality, and meticulous attention to detail, Fortune Prime is set to become a prominent residential address — reflecting Cube Constructions' commitment to creating vibrant, sustainable living spaces that stand the test of time.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="detail-specs-grid" style="grid-template-columns: 1fr;">
+            <div class="detail-spec-item">
+              <i class="bi bi-arrows-angle-expand"></i>
+              <h5>Built-up Area</h5>
+              <span>48,000 sq. ft.</span>
+            </div>
+            <div class="detail-spec-item">
+              <i class="bi bi-house-door"></i>
+              <h5>Configuration</h5>
+              <span>30 Units · 2 BHK</span>
+            </div>
+            <div class="detail-spec-item">
+              <i class="bi bi-calendar-event"></i>
+              <h5>Status</h5>
+              <span>Ongoing · Est: 2027</span>
+            </div>
+            <div class="detail-spec-item">
+              <i class="bi bi-geo-alt"></i>
+              <h5>Location</h5>
+              <span>Nidamanuru, Vijayawada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5 reveal"><h2>Key Highlights</h2></div>
+      <div class="row g-4 stagger-children">
+        <div class="col-md-4 stagger-item reveal">
+          <div class="premium-card">
+            <div class="premium-card-icon-wrapper"><i class="bi bi-building"></i></div>
+            <h5 class="premium-card-title">Elegant Elevation</h5>
+            <p class="premium-card-text">Contemporary architectural design with a striking elevation that creates a lasting impression and a landmark presence.</p>
+          </div>
+        </div>
+        <div class="col-md-4 stagger-item reveal">
+          <div class="premium-card">
+            <div class="premium-card-icon-wrapper"><i class="bi bi-arrows-angle-expand"></i></div>
+            <h5 class="premium-card-title">Spacious Living</h5>
+            <p class="premium-card-text">Well-designed 2 BHK apartments with efficient layouts, generous room sizes, and abundant natural light.</p>
+          </div>
+        </div>
+        <div class="col-md-4 stagger-item reveal">
+          <div class="premium-card">
+            <div class="premium-card-icon-wrapper"><i class="bi bi-geo-alt"></i></div>
+            <h5 class="premium-card-title">Prime Location</h5>
+            <p class="premium-card-text">Situated in Nidamanuru, Vijayawada's growing residential corridor with excellent connectivity and urban amenities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 reveal"><h2>Project Gallery</h2></div>
+      <div class="row g-4 reveal">
+        <div class="col-md-6">
+          <div class="detail-gallery-img"><img src="Fortune Prime - Elevation.jpeg" alt="Fortune Prime - Day View Elevation"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-gallery-img"><img src="Fortune Prime - Elevation - Night View.jpeg" alt="Fortune Prime - Night View Elevation"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner py-5">
+    <div class="container py-5 text-center reveal">
+      <h2 class="fw-bold mb-3" style="font-size: 2.2rem;">Interested in a Similar Project?</h2>
+      <p class="mb-4" style="max-width: 500px; margin-left: auto; margin-right: auto;">Let's discuss how we can bring your vision to life. Get in touch with our team today.</p>
+      <a href="contact.html" class="btn-premium btn-glow px-5 py-3" style="font-size: 0.9rem;">Start Your Project <i class="bi bi-send-fill ms-2"></i></a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const navbar = document.getElementById('mainNavbar');
+    const collapse = document.getElementById('navbarContent');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) { navbar.classList.add('scrolled'); }
+      else if (!collapse.classList.contains('show')) { navbar.classList.remove('scrolled'); }
+    });
+    collapse.addEventListener('show.bs.collapse', function () { navbar.classList.add('scrolled'); });
+    collapse.addEventListener('hide.bs.collapse', function () { if (window.scrollY < 50) navbar.classList.remove('scrolled'); });
+    document.addEventListener('DOMContentLoaded', function () {
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      revealElements.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <footer class="bg-light text-center text-dark py-5">
+    <div class="container">
+      <div class="mb-4">
+        <a href="https://wa.me/919490562082" class="text-dark mx-3 fs-4"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.facebook.com/share/1GThsR6uwj/" class="text-dark mx-3 fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/cubeconstructions_official?utm_source=qr&igsh=dWhoN2J5MGo0MDhu" class="text-dark mx-3 fs-4"><i class="bi bi-instagram"></i></a>
+      </div>
+      <div class="mb-3 d-flex flex-column flex-md-row justify-content-center align-items-center text-center">
+        <a href="contact.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Contact</a>
+        <a href="subcontractors.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Subcontractors</a>
+        <a href="terms.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Terms of Service</a>
+        <a href="privacy.html" class="text-dark fw-bold mx-md-3 my-1 text-uppercase fs-6">Privacy Policy</a>
+      </div>
+      <div class="text-muted fs-6">&copy; Cube Construction | All Rights Reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

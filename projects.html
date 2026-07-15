@@ -19,7 +19,7 @@
     /* Projects-specific styles */
     .projects-stats-row {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 0;
       border-radius: 20px;
       overflow: hidden;
@@ -223,7 +223,7 @@
       .projects-stats-row {
         grid-template-columns: repeat(2, 1fr);
       }
-      .projects-stat-item:nth-child(2)::after {
+      .projects-stat-item:last-child::after {
         display: none;
       }
       .projects-stat-number {
@@ -249,11 +249,7 @@
       .projects-stat-item {
         padding: 1.5rem 1rem;
       }
-      .projects-stat-item:nth-child(2)::after {
-        display: none;
-      }
-      .projects-stat-item:nth-child(1)::after,
-      .projects-stat-item:nth-child(3)::after {
+      .projects-stat-item:last-child::after {
         display: none;
       }
       .mega-card {
@@ -334,19 +330,11 @@
     <div class="projects-stats-row reveal">
       <div class="projects-stat-item">
         <div class="projects-stat-number">50+</div>
-        <div class="projects-stat-label">Completed Projects</div>
-      </div>
-      <div class="projects-stat-item">
-        <div class="projects-stat-number">2</div>
-        <div class="projects-stat-label">Ongoing Projects</div>
+        <div class="projects-stat-label">Projects Executed</div>
       </div>
       <div class="projects-stat-item">
         <div class="projects-stat-number">15+</div>
         <div class="projects-stat-label">Years Experience</div>
-      </div>
-      <div class="projects-stat-item">
-        <div class="projects-stat-number">50+</div>
-        <div class="projects-stat-label">Homes Built</div>
       </div>
     </div>
   </section>
@@ -363,7 +351,7 @@
     <div class="row g-4 stagger-children">
       <!-- Royal Residence -->
       <div class="col-lg-4 col-md-6 stagger-item reveal">
-        <div class="mega-card" style="background-image: url('Royal Residence.png');">
+        <div class="mega-card" onclick="location.href='project-royal-residence.html'" style="background-image: url('Royal Residence.png');">
           <div class="mega-card-number">01</div>
           <div class="mega-card-content">
             <div class="mega-card-tags">
@@ -386,7 +374,7 @@
 
       <!-- Harivillu Signature City -->
       <div class="col-lg-4 col-md-6 stagger-item reveal">
-        <div class="mega-card" style="background-image: url('Harivillu Signature City 1.png');">
+        <div class="mega-card" onclick="location.href='project-harivillu-signature-city.html'" style="background-image: url('Harivillu Signature City 1.png');">
           <div class="mega-card-number">02</div>
           <div class="mega-card-content">
             <div class="mega-card-tags">
@@ -409,7 +397,7 @@
 
       <!-- Harivillu Icon City - Villas -->
       <div class="col-lg-4 col-md-6 stagger-item reveal">
-        <div class="mega-card" style="background-image: url('Harivillu Icon City - Villas.png');">
+        <div class="mega-card" onclick="location.href='project-icon-city-villas.html'" style="background-image: url('Harivillu Icon City - Villas.png');">
           <div class="mega-card-number">03</div>
           <div class="mega-card-content">
             <div class="mega-card-tags">
@@ -432,7 +420,7 @@
 
       <!-- Icon City - Individual House -->
       <div class="col-lg-4 col-md-6 stagger-item reveal">
-        <div class="mega-card" style="background-image: url('Harivillu Icon City - Individual House.png');">
+        <div class="mega-card" onclick="location.href='project-icon-city-house.html'" style="background-image: url('Harivillu Icon City - Individual House.png');">
           <div class="mega-card-number">04</div>
           <div class="mega-card-content">
             <div class="mega-card-tags">
@@ -455,7 +443,7 @@
 
       <!-- Sri Residence -->
       <div class="col-lg-4 col-md-6 stagger-item reveal">
-        <div class="mega-card" style="background-image: url('Sri Residence.png');">
+        <div class="mega-card" onclick="location.href='project-sri-residence.html'" style="background-image: url('Sri Residence.png');">
           <div class="mega-card-number">05</div>
           <div class="mega-card-content">
             <div class="mega-card-tags">
@@ -490,7 +478,7 @@
     <div class="row g-4 stagger-children justify-content-center">
       <!-- Fortune Prime -->
       <div class="col-lg-4 col-md-6 stagger-item reveal">
-        <div class="mega-card" style="background-image: url('Fortune Prime - Elevation.jpeg');">
+        <div class="mega-card" onclick="location.href='project-fortune-prime.html'" style="background-image: url('Fortune Prime - Elevation.jpeg');">
           <div class="mega-card-number">06</div>
           <div class="mega-card-content">
             <div class="mega-card-tags">
@@ -513,7 +501,7 @@
 
       <!-- TSR Prime -->
       <div class="col-lg-4 col-md-6 stagger-item reveal">
-        <div class="mega-card" style="background-image: url('TSR Prime - Lay Out.jpeg');">
+        <div class="mega-card" onclick="location.href='project-tsr-prime.html'" style="background-image: url('TSR Prime - Lay Out.jpeg');">
           <div class="mega-card-number">07</div>
           <div class="mega-card-content">
             <div class="mega-card-tags">
